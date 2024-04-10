@@ -23,6 +23,7 @@
 - Bröd bilden som är dekoration får anpassas i höjden och bredden så att den blir bra.
 - Typsnittet är playfair och hittas här: https://fonts.google.com/specimen/Playfair+Display?query=playfair
 - Svg icon: https://fonts.google.com/icons?selected=Material+Symbols+Outlined:breakfast_dining:FILL@0;wght@400;GRAD@0;opsz@24&icon.query=bread
+- Produktkorten ska vara dynamiska i höjd för att få plats med instruktioner och innehåll.
 
 ## Texter
 
