@@ -1,9 +1,6 @@
 header {    
     background-color: color(backgroundColor);
-    display: flex;
-    flex-direction: column;
-    gap: 5px;
-    align-items: center;    
+    @include flexCenter($jc: center, $fd: column, $gap: 5px);  
     padding-top: 10px; 
 
     .logo {        
@@ -11,17 +8,60 @@ header {
         height: 90px;
     }
 
-    .test-divider {
+    .test-divider { //ta bort, bli komponent i react
         width: 350px;
         height: 10px;
         background-color: #E7D5AE;
     }
 
-    .menu {
-        font-size: size(sm);
+    .menu { //ta bort, bli komponent i react
+        font-size: size(sm); 
     }
 
+    .header-image-container {
+        @include flexCenter($jc: center, $fd: row); 
+        width: 100svw;
+        height: auto;
+
+        .header-image {            
+            width: 80%;
+            object-fit: cover;  
+        } 
+    }
+   
     @include response(md) {
-        
+        .menu { //ta bort, bli komponent i react
+            font-size: size(lg); 
+        }
+
+        .header-image-container {
+            min-height: 295px;
+            max-height: 305px;
+            
+            .header-image {
+                border-radius: 10px;
+                min-height: inherit;
+                max-height: 305px;
+                max-width: 798px;
+            }
+        }        
+    }
+
+    @include response(lg) {
+        .logo {
+            width: 507px; 
+            height: 130px;
+        }
+        .menu { //ta bort, bli komponent i react
+            font-size: size(xl); 
+        }
+
+        .header-image-container {           
+            
+            .header-image { 
+                border-radius: 0px;
+                height: 305px;
+            }
+        }    
     }
 }
