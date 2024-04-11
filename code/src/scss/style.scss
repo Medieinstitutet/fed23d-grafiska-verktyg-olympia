@@ -12,7 +12,7 @@ body {
 }
 
 #root {
-  @include flexCenter($ai: center, $fd: column, $gap: 16px);
+  @include flexCenter($ai: center, $fd: column, $gap: 40px);
   width: 100%;
   padding: 0 12px;
   max-width: 1180px;
@@ -26,12 +26,13 @@ body {
 
   .about {
     @include flexCenter($fd: column, $ai: center, $gap: 16px);
+    max-width: 400px;
     @include response(md) {
-      max-width: 470px;
       gap: 24px;
+      max-width: 470px;
     }
     @include response(lg) {
-      max-width: 1000px;
+      max-width: 990px;
     }
     .description {
       @include flexCenter($fd: column, $gap: 16px);
@@ -131,4 +132,13 @@ body {
     font-size: 3rem;
     font-weight: 800;
   }
+}
+
+.lightbox {
+  width: 100vw;
+  min-height: 100vh;
+  background-color: black;
+  position: fixed;
+  opacity: 50%;
+  top: 0;
 }
