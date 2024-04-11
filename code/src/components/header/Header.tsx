@@ -1,11 +1,11 @@
 import LogoComponent from './Logo'
-import HeaderImage from '../../assets/images/headerbread.jpg'
+import HeaderImageComponent from './HeaderImage'
 
 const Header = () => {
   return (
     <header>
         <div>            
-        <LogoComponent />
+            <LogoComponent />
         </div>
         <div>Här är en divider</div>
         <nav> 
@@ -14,7 +14,7 @@ const Header = () => {
             </h1>
         </nav>
         <div>Här är en divider</div>
-        <img className="header-image" src={HeaderImage} alt="Heading photo of sourdough bread" width="798" height="305" /> 
+        <HeaderImageComponent />
         <div>Här är en divider</div>
     </header> 
     //Nav kommer in som separat komponent 
