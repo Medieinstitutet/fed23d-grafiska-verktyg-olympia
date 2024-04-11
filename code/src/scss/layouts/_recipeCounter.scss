@@ -1,0 +1,27 @@
+.counter {
+  height: 52px;
+  margin: 10px 0;
+  background-color: pink;
+  @include flexCenter;
+
+  input {
+    margin: 0 30px;
+    background-color: transparent;
+    border: none;
+    font-size: 2rem;
+    @include flexCenter;
+  }
+
+  input,
+  button {
+    height: 50px;
+    width: 80px;
+  }
+
+  button {
+    width: 50px;
+    background-color: color(quint);
+    border: none;
+    font-size: 2rem;
+  }
+}
