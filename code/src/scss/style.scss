@@ -2,9 +2,59 @@
 @import 'mixins/media';
 @import 'mixins/mixins';
 @import 'variables/variables';
-
 @import 'layouts/recipies';
-@import 'header'
+@import 'header';
 
+body {
+  @include flexCenter($jc: center);
+  background-color: color(backgroundColor);
+  color: color(primaryText);
+}
 
+#root {
+  @include flexCenter($ai: center, $fd: column, $gap: 16px);
+  width: 100%;
+  padding: 0 12px;
 
+  @include response(md) {
+    padding: 0 35px;
+  }
+
+  @include response(lg) {
+    max-width: 1180px;
+  }
+}
+
+footer {
+  @include flexCenter($ai: center, $jc: space-between, $fd: row);
+  height: 90px;
+  max-width: 1180px;
+  width: 100%;
+  font-size: 0.875rem;
+  font-weight: 600;
+  line-height: 2rem;
+  padding: 0 8px;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: color(quint);
+
+  @include response(md) {
+    font-size: 1.125rem;
+    padding: 0 16px;
+  }
+
+  @include response(lg) {
+    font-size: 1.5rem;
+    height: 120px;
+  }
+
+  .address {
+    @include flexCenter($fd: column);
+  }
+  .social-media {
+    @include flexCenter($gap: 4px);
+  }
+  .contact {
+    @include flexCenter($ai: center, $fd: column, $gap: 6px);
+  }
+}
