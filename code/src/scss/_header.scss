@@ -1,5 +1,4 @@
 header {    
-    background-color: color(backgroundColor);
     @include flexCenter($jc: center, $fd: column, $gap: 5px);  
     padding-top: 10px; 
 
@@ -11,7 +10,7 @@ header {
     .test-divider { //ta bort, bli komponent i react
         width: 350px;
         height: 10px;
-        background-color: #E7D5AE;
+        background-color: #E7D5AE; 
     }
 
     .menu { //ta bort, bli komponent i react
