@@ -27,3 +27,11 @@ $font-sizes: (
   width: 100%;
   height: 100%;
 }
+
+$debugging: true;
+
+div {
+  @if $debugging {
+    outline: 1px solid hotpink;
+  }
+}

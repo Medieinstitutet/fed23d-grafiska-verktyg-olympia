@@ -1,16 +1,16 @@
 @mixin response($breakpoint) {
   @if ($breakpoint == sm) {
-    @media (max-width: 393px) {
+    @media (min-width: 393px) {
       @content;
     }
   }
   @if ($breakpoint == md) {
-    @media (max-width: 744px) {
+    @media (min-width: 744px) {
       @content;
     }
   }
-  @if ($breakpoint == sm) {
-    @media (max-width: 1440px) {
+  @if ($breakpoint == lg) {
+    @media (min-width: 1440px) {
       @content;
     }
   }
