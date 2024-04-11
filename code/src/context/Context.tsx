@@ -16,7 +16,7 @@ export const ContextProvider: React.FC<IContextType> = ({ children }) => {
   useEffect(() => {
     const resizeWindow = () => {
       const screenSize = window.innerWidth;
-      setIsMobile(screenSize < 640);
+      setIsMobile(screenSize < 744);
     };
 
     window.addEventListener('resize', resizeWindow);
