@@ -1,11 +1,11 @@
-import Logo from '../../assets/svg-icons/BreadLogo.svg'
+import LogoComponent from './Logo'
 import HeaderImage from '../../assets/images/headerbread.jpg'
 
 const Header = () => {
   return (
     <header>
         <div>            
-            <img className="logo" src={Logo} alt="Logo: All About Bread" width="507" height="130" />
+        <LogoComponent />
         </div>
         <div>Här är en divider</div>
         <nav> 
