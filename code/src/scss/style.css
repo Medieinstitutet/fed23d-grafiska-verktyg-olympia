@@ -26,6 +26,7 @@ body {
   gap: 16px;
   width: 100%;
   padding: 0 12px;
+  max-width: 1180px;
 }
 @media (min-width: 744px) {
   #root {
@@ -37,15 +38,13 @@ body {
     max-width: 1180px;
   }
 }
-
-footer {
+#root footer {
   display: flex;
   align-items: center;
   justify-content: space-between;
   flex-direction: row;
   gap: 0;
   height: 90px;
-  max-width: 1180px;
   width: 100%;
   font-size: 0.875rem;
   font-weight: 600;
@@ -56,35 +55,74 @@ footer {
   background-color: #e7d5ae;
 }
 @media (min-width: 744px) {
-  footer {
+  #root footer {
     font-size: 1.125rem;
     padding: 0 16px;
   }
 }
 @media (min-width: 1440px) {
-  footer {
+  #root footer {
     font-size: 1.5rem;
     height: 120px;
   }
 }
-footer .address {
+#root footer .address {
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
   gap: 0;
 }
-footer .social-media {
+#root footer .social-media {
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: row;
   gap: 4px;
 }
-footer .contact {
+#root footer .contact {
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
   gap: 6px;
+}
+
+.divider {
+  width: 100%;
+  background-color: #e7d5ae;
+  height: 10px;
+}
+@media (min-width: 744px) {
+  .divider {
+    height: 20px;
+  }
+}
+@media (min-width: 1440px) {
+  .divider {
+    height: 35px;
+  }
+}
+.divider-msl {
+  height: 20px;
+}
+@media (min-width: 744px) {
+  .divider-msl {
+    height: 10px;
+  }
+}
+@media (min-width: 1440px) {
+  .divider-msl {
+    height: 35px;
+  }
+}
+@media (min-width: 744px) {
+  .divider-ssl {
+    height: 10px;
+  }
+}
+@media (min-width: 1440px) {
+  .divider-ssl {
+    height: 35px;
+  }
 }/*# sourceMappingURL=style.css.map */
