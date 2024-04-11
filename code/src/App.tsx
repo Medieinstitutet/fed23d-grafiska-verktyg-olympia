@@ -1,14 +1,14 @@
-import { useState } from 'react';
-import RecipeContainer from './components/RecipeContainer.tsx';
-import RecipeMainContainer from './components/RecipeMainContainer.tsx';
+import RecipeMainContainer from './components/recipe/RecipeMainContainer.tsx';
+import RecipeImage from './components/recipe/RecipeImage.tsx';
 import Footer from './components/footer/Footer';
 
 function App() {
   return (
-    <div>
-      <RecipeMainContainer />
+    <>
+      {/* <RecipeMainContainer /> */}
+      <RecipeImage imageUrl="" />
       <Footer />
-    </div>
+    </>
   );
 }
 
