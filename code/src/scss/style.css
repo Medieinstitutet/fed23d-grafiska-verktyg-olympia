@@ -1,1 +1,1 @@
-*{margin:0;padding:0;box-sizing:border-box}/*# sourceMappingURL=style.css.map */
+*{margin:0;padding:0;box-sizing:border-box}header{background-color:#f0e8d3;display:flex;flex-direction:column;gap:5px;align-items:center;padding-top:10px}header .logo{width:333px;height:90px}header .test-divider{width:350px;height:10px;background-color:#e7d5ae}header .menu{font-size:1.5rem}

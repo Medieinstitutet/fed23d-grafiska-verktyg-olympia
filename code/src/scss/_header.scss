@@ -1,0 +1,27 @@
+header {    
+    background-color: color(backgroundColor);
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    align-items: center;    
+    padding-top: 10px; 
+
+    .logo {        
+        width: 333px;
+        height: 90px;
+    }
+
+    .test-divider {
+        width: 350px;
+        height: 10px;
+        background-color: #E7D5AE;
+    }
+
+    .menu {
+        font-size: size(sm);
+    }
+
+    @include response(md) {
+        
+    }
+}
