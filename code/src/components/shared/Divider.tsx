@@ -12,7 +12,7 @@ const Divider: React.FC<IDividerProps> = ({ responsiveness, maxWidth }) => {
   }
 
   const dividerWidth = {
-    maxWidth: maxWidth || '700px',
+    //maxWidth: maxWidth || '100%',
   };
 
   return <div className={`divider ${dividerClass}`} style={dividerWidth}></div>;
