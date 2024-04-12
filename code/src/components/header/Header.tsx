@@ -8,15 +8,17 @@ const Header = () => {
         <div>            
             <LogoComponent />
         </div>
-        <Divider />
-        <nav> 
-            <h1 className="menu">
-                Recipes FAQ About Contact
-            </h1>
-        </nav>
-        <Divider />
-        <HeaderImageComponent />
-        <Divider />
+        <div className="header-container">
+          <Divider />
+          <nav> 
+              <h1 className="menu">
+                  Recipes FAQ About Contact
+              </h1>
+          </nav>
+          <Divider />
+          <HeaderImageComponent />
+          <Divider />
+        </div>
     </header> 
     //Nav kommer in som separat komponent 
     //Divider kommer in som separat komponent
