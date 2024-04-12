@@ -17,8 +17,7 @@ body {
   background-color: #f0e8d3;
   color: #3b1e04;
 }
-
-#root {
+body #root {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -29,16 +28,16 @@ body {
   max-width: 1180px;
 }
 @media (min-width: 744px) {
-  #root {
+  body #root {
     padding: 0 35px;
   }
 }
 @media (min-width: 1440px) {
-  #root {
+  body #root {
     max-width: 1180px;
   }
 }
-#root footer {
+body #root footer {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -55,37 +54,155 @@ body {
   background-color: #e7d5ae;
 }
 @media (min-width: 744px) {
-  #root footer {
+  body #root footer {
     font-size: 1.125rem;
     padding: 0 16px;
   }
 }
 @media (min-width: 1440px) {
-  #root footer {
+  body #root footer {
     font-size: 1.5rem;
     height: 120px;
   }
 }
-#root footer .address {
+body #root footer .address {
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
   gap: 0;
 }
-#root footer .social-media {
+body #root footer .social-media {
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: row;
   gap: 4px;
 }
-#root footer .contact {
+body #root footer .contact {
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
   gap: 6px;
+}
+body #root .cookiebar-outer {
+  width: 100vw;
+  height: 170px;
+  padding: 16px 10px;
+  background-color: #c69962;
+  position: absolute;
+  bottom: 0;
+}
+@media (min-width: 744px) {
+  body #root .cookiebar-outer {
+    height: 185px;
+  }
+}
+@media (min-width: 1440px) {
+  body #root .cookiebar-outer {
+    height: 150px;
+  }
+}
+body #root .cookiebar-outer .cookiebar-inner {
+  background-color: #e7d5ae;
+  width: 100%;
+  height: 100%;
+  padding: 16px 42px;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column;
+  gap: 0;
+}
+@media (min-width: 744px) {
+  body #root .cookiebar-outer .cookiebar-inner {
+    padding: 12px 24px;
+  }
+}
+@media (min-width: 744px) {
+  body #root .cookiebar-outer .cookiebar-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row;
+    gap: 32px;
+  }
+}
+body #root .cookiebar-outer .cookiebar-inner p {
+  font-weight: bold;
+  font-size: 0.875rem;
+  text-align: center;
+}
+@media (min-width: 744px) {
+  body #root .cookiebar-outer .cookiebar-inner p {
+    font-size: 1.125rem;
+    text-align: start;
+  }
+}
+@media (min-width: 1440px) {
+  body #root .cookiebar-outer .cookiebar-inner p {
+    font-size: 1.5rem;
+  }
+}
+body #root .cookiebar-outer .cookiebar-inner .buttons-panel {
+  height: 100%;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  flex-direction: row;
+  gap: 24px;
+}
+@media (min-width: 744px) {
+  body #root .cookiebar-outer .cookiebar-inner .buttons-panel {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+    gap: 0;
+  }
+}
+@media (min-width: 1440px) {
+  body #root .cookiebar-outer .cookiebar-inner .buttons-panel {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    flex-direction: row;
+    gap: 24px;
+  }
+}
+
+.cookie-button {
+  width: 135px;
+  height: 50px;
+  border-radius: 10px;
+  font-size: 2rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  gap: 0;
+}
+@media (min-width: 744px) {
+  .cookie-button {
+    width: 150px;
+    height: 60px;
+  }
+}
+.cookie-button.accept {
+  background-color: #d4af7a;
+}
+.cookie-button.accept:hover {
+  background-color: #c69962;
+}
+.cookie-button.decline {
+  background-color: #854811;
+  color: #f0e8d3;
+}
+.cookie-button.decline:hover {
+  background-color: #3b1e04;
 }
 
 .divider {
