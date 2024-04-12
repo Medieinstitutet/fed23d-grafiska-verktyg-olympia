@@ -11,6 +11,8 @@ $colors: (
   @return map-get($colors, $color-name);
 }
 
+$primary-font: 'Playfair Display', serif;
+
 $font-sizes: (
   xl: 3rem,
   lg: 2.5rem,
