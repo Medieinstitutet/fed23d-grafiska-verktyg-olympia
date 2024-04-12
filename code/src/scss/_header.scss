@@ -7,11 +7,9 @@ header {
         height: 90px;
     }
 
-    .test-divider { //ta bort, bli komponent i react
-        width: 350px;
-        height: 10px;
-        background-color: #E7D5AE; 
-
+    .divider { 
+        width: 80%;
+        max-width: 595px;
     }
 
     .menu { //ta bort, bli komponent i react
@@ -30,6 +28,10 @@ header {
     }
    
     @include response(md) {
+        .divider { 
+            min-width: 674px;
+        }
+
         .menu { //ta bort, bli komponent i react
             font-size: size(lg); 
         }
@@ -42,6 +44,7 @@ header {
                 border-radius: 10px;
                 min-height: inherit;
                 max-height: 305px;
+                min-width: 608px;
                 max-width: 798px;
             }
         }        
@@ -52,6 +55,7 @@ header {
             width: 507px; 
             height: 130px;
         }
+    
         .menu { //ta bort, bli komponent i react
             font-size: size(xl); 
         }
