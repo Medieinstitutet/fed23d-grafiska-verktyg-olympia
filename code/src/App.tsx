@@ -2,6 +2,8 @@ import Cookiebar from './components/cookiebar/Cookiebar';
 import Footer from './components/footer/Footer';
 import { useContext } from 'react';
 import Context from './context/Context';
+import About from './components/main/about/About';
+/* import Lightbox from './components/shared/Lightbox'; */
 
 function App() {
   const context = useContext(Context);
@@ -12,8 +14,10 @@ function App() {
 
   return (
     <>
+      <About />
       <Footer />
       {isCookiebarOpen && <Cookiebar />}
+      {/*   <Lightbox /> will depend on modalState! */}
     </>
   );
 }

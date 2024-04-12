@@ -8,104 +8,123 @@ body {
   @include flexCenter($jc: center);
   background-color: color(backgroundColor);
   color: color(primaryText);
+  font-family: $primary-font;
+}
 
-  #root {
-    @include flexCenter($ai: center, $fd: column, $gap: 16px);
-    width: 100%;
-    padding: 0 12px;
+#root {
+  @include flexCenter($ai: center, $fd: column, $gap: 16px);
+  width: 100%;
+  padding: 0 12px;
+  max-width: 1180px;
+
+  @include response(md) {
+    padding: 0 35px;
+  }
+
+  @include response(lg) {
     max-width: 1180px;
+  }
+
+  .about {
+    @include flexCenter($fd: column, $ai: center, $gap: 16px);
+    max-width: 400px;
+    @include response(md) {
+      gap: 24px;
+      max-width: 470px;
+    }
+    @include response(lg) {
+      max-width: 990px;
+    }
+    .description {
+      @include flexCenter($fd: column, $gap: 16px);
+      @include response(md) {
+        gap: 20px;
+      }
+    }
+  }
+
+  footer {
+    @include flexCenter($ai: center, $jc: space-between, $fd: row);
+    height: 90px;
+
+    width: 100%;
+    font-size: 0.875rem;
+    font-weight: 600;
+    line-height: 2rem;
+    padding: 0 8px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: color(quint);
 
     @include response(md) {
-      padding: 0 35px;
+      font-size: 1.125rem;
+      padding: 0 16px;
     }
 
     @include response(lg) {
-      max-width: 1180px;
+      font-size: 1.5rem;
+      height: 120px;
     }
 
-    footer {
-      @include flexCenter($ai: center, $jc: space-between, $fd: row);
-      height: 90px;
+    .address {
+      @include flexCenter($fd: column);
+    }
+    .social-media {
+      @include flexCenter($gap: 4px);
+    }
+    .contact {
+      @include flexCenter($ai: center, $fd: column, $gap: 6px);
+    }
+  }
 
-      width: 100%;
-      font-size: 0.875rem;
-      font-weight: 600;
-      line-height: 2rem;
-      padding: 0 8px;
-      margin-left: auto;
-      margin-right: auto;
+  .cookiebar-outer {
+    width: 100vw;
+    height: 170px;
+    padding: 16px 10px;
+    background-color: color(quart);
+    position: absolute;
+    bottom: 0;
+    @include response(md) {
+      height: 185px;
+    }
+    @include response(lg) {
+      height: 150px;
+    }
+    .cookiebar-inner {
       background-color: color(quint);
-
+      width: 100%;
+      height: 100%;
+      padding: 16px 42px;
+      border-radius: 20px;
       @include response(md) {
-        font-size: 1.125rem;
-        padding: 0 16px;
+        padding: 12px 24px;
       }
 
-      @include response(lg) {
-        font-size: 1.5rem;
-        height: 120px;
-      }
-
-      .address {
-        @include flexCenter($fd: column);
-      }
-      .social-media {
-        @include flexCenter($gap: 4px);
-      }
-      .contact {
-        @include flexCenter($ai: center, $fd: column, $gap: 6px);
-      }
-    }
-
-    .cookiebar-outer {
-      width: 100vw;
-      height: 170px;
-      padding: 16px 10px;
-      background-color: color(quart);
-      position: absolute;
-      bottom: 0;
+      @include flexCenter($jc: space-between, $ai: center, $fd: column);
       @include response(md) {
-        height: 185px;
+        @include flexCenter($fd: row, $jc: space-between, $gap: 32px);
       }
-      @include response(lg) {
-        height: 150px;
+      p {
+        font-weight: bold;
+        font-size: 0.875rem;
+        text-align: center;
+        @include response(md) {
+          font-size: 1.125rem;
+          text-align: start;
+        }
+        @include response(lg) {
+          font-size: 1.5rem;
+        }
       }
-      .cookiebar-inner {
-        background-color: color(quint);
-        width: 100%;
+      .buttons-panel {
         height: 100%;
-        padding: 16px 42px;
-        border-radius: 20px;
-        @include response(md) {
-          padding: 12px 24px;
-        }
 
-        @include flexCenter($jc: space-between, $ai: center, $fd: column);
+        @include flexCenter($gap: 24px, $ai: flex-end);
         @include response(md) {
-          @include flexCenter($fd: row, $jc: space-between, $gap: 32px);
+          @include flexCenter($fd: column, $jc: space-between);
         }
-        p {
-          font-weight: bold;
-          font-size: 0.875rem;
-          text-align: center;
-          @include response(md) {
-            font-size: 1.125rem;
-            text-align: start;
-          }
-          @include response(lg) {
-            font-size: 1.5rem;
-          }
-        }
-        .buttons-panel {
-          height: 100%;
-
-          @include flexCenter($gap: 24px, $ai: flex-end);
-          @include response(md) {
-            @include flexCenter($fd: column, $jc: space-between);
-          }
-          @include response(lg) {
-            @include flexCenter($fd: row, $jc: flex-end, $gap: 24px);
-          }
+        @include response(lg) {
+          @include flexCenter($fd: row, $jc: flex-end, $gap: 24px);
         }
       }
     }
@@ -138,6 +157,8 @@ body {
   }
 }
 
+// ---- SHARED ---- //
+
 .divider {
   width: 100%;
   background-color: color(quint);
@@ -165,4 +186,39 @@ body {
       height: 35px;
     }
   }
+}
+
+.paragraph {
+  line-height: 1rem;
+  font-size: 0.75rem;
+  font-weight: 900;
+  @include response(md) {
+    line-height: 1.5rem;
+    font-size: 1.125rem;
+  }
+  @include response(lg) {
+    font-size: 1.5rem;
+    line-height: 1.75rem;
+  }
+}
+
+.large-heading {
+  font-size: 2.5rem;
+  @include response(md) {
+    font-size: 2rem;
+    font-weight: 700;
+  }
+  @include response(lg) {
+    font-size: 3rem;
+    font-weight: 800;
+  }
+}
+
+.lightbox {
+  width: 100vw;
+  min-height: 100vh;
+  background-color: black;
+  position: fixed;
+  opacity: 50%;
+  top: 0;
 }
