@@ -1,4 +1,5 @@
 import LogoComponent from './Logo'
+import Divider from '../shared/Divider'
 import HeaderImageComponent from './HeaderImage'
 
 const Header = () => {
@@ -7,15 +8,15 @@ const Header = () => {
         <div>            
             <LogoComponent />
         </div>
-        <div className="test-divider"></div>
+        <Divider />
         <nav> 
             <h1 className="menu">
                 Recipes FAQ About Contact
             </h1>
         </nav>
-        <div className="test-divider"></div>
+        <Divider />
         <HeaderImageComponent />
-        <div className="test-divider"></div>
+        <Divider />
     </header> 
     //Nav kommer in som separat komponent 
     //Divider kommer in som separat komponent
