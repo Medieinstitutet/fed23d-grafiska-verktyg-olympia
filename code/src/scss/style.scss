@@ -5,6 +5,13 @@
 @import 'layouts/recipies';
 @import 'header';
 
+@import 'layouts/footer';
+@import 'layouts/about';
+@import 'layouts/shared';
+@import 'layouts/cookie-button';
+@import 'layouts/cookiebar';
+@import 'layouts/base';
+
 body {
   @include flexCenter($jc: center);
   background-color: color(backgroundColor);
@@ -143,3 +150,4 @@ body {
   opacity: 50%;
   top: 0;
 }
+
