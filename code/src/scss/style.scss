@@ -2,152 +2,18 @@
 @import 'mixins/media';
 @import 'mixins/mixins';
 @import 'variables/variables';
-@import 'layouts/recipies';
+@import 'layouts/base';
+
 @import 'header';
+
+@import 'layouts/recipes';
+@import 'layouts/recipeImage';
+@import 'layouts/recipeCounter';
+@import 'layouts/recipeContainer';
+@import 'layouts/recipeMainContainer';
 
 @import 'layouts/footer';
 @import 'layouts/about';
 @import 'layouts/shared';
 @import 'layouts/cookie-button';
 @import 'layouts/cookiebar';
-@import 'layouts/base';
-
-body {
-  @include flexCenter($jc: center);
-  background-color: color(backgroundColor);
-  color: color(primaryText);
-  font-family: $primary-font;
-}
-
-#root {
-  @include flexCenter($ai: center, $fd: column, $gap: 40px);
-  width: 100%;
-  padding: 0 12px;
-  max-width: 1180px;
-
-  @include response(md) {
-    padding: 0 35px;
-  }
-
-  @include response(lg) {
-  }
-
-  .about {
-    @include flexCenter($fd: column, $ai: center, $gap: 16px);
-    max-width: 400px;
-    @include response(md) {
-      gap: 24px;
-      max-width: 470px;
-    }
-    @include response(lg) {
-      max-width: 990px;
-    }
-    .description {
-      @include flexCenter($fd: column, $gap: 16px);
-      @include response(md) {
-        gap: 20px;
-      }
-    }
-  }
-
-  footer {
-    @include flexCenter($ai: center, $jc: space-between, $fd: row);
-    height: 90px;
-
-    width: 100%;
-    font-size: 0.875rem;
-    font-weight: 600;
-    line-height: 2rem;
-    padding: 0 8px;
-    margin-left: auto;
-    margin-right: auto;
-    background-color: color(quint);
-
-    @include response(md) {
-      font-size: 1.125rem;
-      padding: 0 16px;
-    }
-
-    @include response(lg) {
-      font-size: 1.5rem;
-      height: 120px;
-    }
-
-    .address {
-      @include flexCenter($fd: column);
-    }
-    .social-media {
-      @include flexCenter($gap: 4px);
-    }
-    .contact {
-      @include flexCenter($ai: center, $fd: column, $gap: 6px);
-    }
-  }
-}
-
-// ---- SHARED ---- //
-
-.divider {
-  //width: 100%;
-  background-color: color(quint);
-  height: 10px;
-  @include response(md) {
-    height: 20px;
-  }
-  @include response(lg) {
-    height: 35px;
-  }
-  &-msl {
-    height: 20px;
-    @include response(md) {
-      height: 10px;
-    }
-    @include response(lg) {
-      height: 35px;
-    }
-  }
-  &-ssl {
-    @include response(md) {
-      height: 10px;
-    }
-    @include response(lg) {
-      height: 35px;
-    }
-  }
-}
-
-.paragraph {
-  line-height: 1rem;
-  font-size: 0.75rem;
-  font-weight: 900;
-  @include response(md) {
-    line-height: 1.5rem;
-    font-size: 1.125rem;
-  }
-  @include response(lg) {
-    font-size: 1.5rem;
-    line-height: 1.75rem;
-  }
-}
-
-.large-heading {
-  font-size: 2.5rem;
-  @include response(md) {
-    font-size: 2rem;
-    font-weight: 700;
-  }
-  @include response(lg) {
-    font-size: 3rem;
-    font-weight: 800;
-  }
-}
-
-.lightbox {
-  width: 100vw;
-  min-height: 100vh;
-  background-color: black;
-  position: fixed;
-  opacity: 50%;
-  top: 0;
-}
-

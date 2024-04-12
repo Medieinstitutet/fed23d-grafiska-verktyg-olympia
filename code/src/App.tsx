@@ -1,5 +1,5 @@
 import Header from './components/header/Header';
-import Cookiebar from './components/cookiebar/Cookiebar';
+// import Cookiebar from './components/cookiebar/Cookiebar';
 import RecipeMainContainer from './components/recipe/RecipeMainContainer';
 import RecipeImage from './components/recipe/RecipeImage';
 import Footer from './components/footer/Footer';
@@ -13,7 +13,7 @@ function App() {
 
   if (!context) return;
 
-  const { isCookiebarOpen } = context;
+  // const { isCookiebarOpen } = context;
 
   return (
     <>
@@ -22,7 +22,7 @@ function App() {
       <RecipeMainContainer />
       <About />
       <Footer />
-      {isCookiebarOpen && <Cookiebar />}
+      {/* {isCookiebarOpen && <Cookiebar />} */}
       {/*   <Lightbox /> will depend on modalState! */}
     </>
   );
