@@ -1,0 +1,17 @@
+.about {
+  @include flexCenter($fd: column, $ai: center, $gap: 16px);
+  max-width: 400px;
+  @include response(md) {
+    gap: 24px;
+    max-width: 470px;
+  }
+  @include response(lg) {
+    max-width: 990px;
+  }
+  .description {
+    @include flexCenter($fd: column, $gap: 16px);
+    @include response(md) {
+      gap: 20px;
+    }
+  }
+}
