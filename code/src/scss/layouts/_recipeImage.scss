@@ -5,6 +5,11 @@
   background-color: color(quart);
   overflow: hidden;
 
+  @include response(sm) {
+    width: 300px;
+    height: 300px;
+  }
+
   img {
     height: 100%;
     width: 100%;

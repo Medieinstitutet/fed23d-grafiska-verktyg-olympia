@@ -2,10 +2,10 @@
 @import 'mixins/media';
 @import 'mixins/mixins';
 @import 'variables/variables';
-@import 'layouts/recipeImage';
 @import 'layouts/recipes';
-@import 'layouts/recipeCounter';
 @import 'layouts/recipeContainer';
+@import 'layouts/recipeCounter';
+@import 'layouts/recipeImage';
 @import 'layouts/recipeMainContainer';
 
 body {

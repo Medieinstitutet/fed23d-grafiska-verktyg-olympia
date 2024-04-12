@@ -1,5 +1,4 @@
-import React from 'react';
-import '../../scss/layouts/_recipeImage.scss';
+// import '../../scss/layouts/_recipeImage.scss';
 
 interface RecipeImageProps {
   imageUrl: string;

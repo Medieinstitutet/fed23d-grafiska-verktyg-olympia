@@ -6,7 +6,7 @@ const RecipeMainContainer = () => {
   return (
     <div className="recipe-main-container">
       <h1>Bread Title</h1>
-      {/* <RecipeImage imageUrl="" /> */}
+      <RecipeImage imageUrl="" />
       <RecipeCounter />
       <RecipeContainer />
     </div>
