@@ -7,7 +7,7 @@ import About from './components/main/about/About';
 function App() {
   return (
     <>
-      {/* <RecipeMainContainer /> */}
+      <RecipeMainContainer />
       <RecipeImage imageUrl="" />
       <About />
       <Footer />

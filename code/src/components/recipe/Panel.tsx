@@ -1,5 +1,5 @@
 import React from 'react';
-import '../scss/layouts/_recipes.scss';
+import '../../scss/layouts/_recipeContainer.scss';
 
 interface PanelProps {
   height: string;
