@@ -1,5 +1,6 @@
 import LogoComponent from './Logo'
 import Divider from '../shared/Divider'
+import NavigationBar from './Navbar'
 import HeaderImageComponent from './HeaderImage'
 
 const Header = () => {
@@ -10,20 +11,12 @@ const Header = () => {
         </div>
         <div className="header-container">
           <Divider />
-          <nav> 
-              <h1 className="menu">
-                  Recipes FAQ About Contact
-              </h1>
-          </nav>
+          <NavigationBar />
           <Divider />
           <HeaderImageComponent />
           <Divider />
         </div>
     </header> 
-    //Nav kommer in som separat komponent 
-    //Divider kommer in som separat komponent
-
-    //Ändra header image vid mindre än tablet
   )
 }
 

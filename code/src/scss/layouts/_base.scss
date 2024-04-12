@@ -1,10 +1,13 @@
-body {
-  @include flexCenter($jc: center);
-  background-color: color(backgroundColor);
-  color: color(primaryText);
-  font-family: $primary-font;
-}
+html {
+  scroll-behavior: smooth;
 
+  body {
+    @include flexCenter($jc: center);
+    background-color: color(backgroundColor);
+    color: color(primaryText);
+    font-family: $primary-font;
+  }
+}
 #root {
   @include flexCenter($ai: center, $fd: column, $gap: 16px);
   width: 100%;
