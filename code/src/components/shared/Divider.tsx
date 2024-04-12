@@ -3,7 +3,7 @@ interface IDividerProps {
   maxWidth?: string;
 }
 
-const Divider: React.FC<IDividerProps> = ({ responsiveness, maxWidth }) => {
+const Divider: React.FC<IDividerProps> = ({ responsiveness }) => { //maxWidth
   let dividerClass = 'divider';
   if (responsiveness === 'msl') {
     dividerClass = 'divider-msl';
