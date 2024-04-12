@@ -8,7 +8,8 @@ header {
     }
 
     .divider { 
-        width: 80%;
+//width: 100%;
+        width: 350px; 
         max-width: 595px;
     }
 
@@ -17,13 +18,13 @@ header {
     }
 
     .header-image-container {
-        @include flexCenter($jc: center, $fd: row); 
+        @include flexCenter($jc: center, $fd: row, $gap: 10px); 
         width: 100svw;
         height: auto;
 
-        .header-image {            
+        .header-image {          
             width: 80%;
-            object-fit: cover;  
+            object-fit: cover; 
         } 
     }
    
@@ -41,11 +42,10 @@ header {
             max-height: 305px;
             
             .header-image {
-                border-radius: 10px;
                 min-height: inherit;
                 max-height: 305px;
                 min-width: 608px;
-                max-width: 798px;
+                max-width: 700px;
             }
         }        
     }
@@ -63,8 +63,8 @@ header {
         .header-image-container {           
             
             .header-image { 
-                border-radius: 0px;
                 height: 305px;
+                max-width: 798px;
             }
         }    
     }
