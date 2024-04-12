@@ -16,10 +16,30 @@ header {
             width: 80%;
             min-width: 350px; 
         }
-        
-        .menu { //ta bort, bli komponent i react
-            font-size: size(sm); 
-        }
+
+        .navigation-bar {
+            @include flexCenter($jc: center);
+            width: 100%;           
+
+            .menu-list {
+               @include flexCenter($jc: space-between, $fd: row, $gap: 10px);
+               width: 80%;
+               min-width: 350px;
+               max-width: 675px;               
+
+                .list-item {
+                    list-style: none;            
+                }
+
+                .list-item-name { 
+                    font-size: size(sm);
+                    text-decoration: none;
+                    color: color(primaryText);
+                    font-weight: 700;
+                    filter: drop-shadow(7px 3px 2px #3b1e0444); 
+                } 
+            }            
+        }        
         
         .header-image-container {
             @include flexCenter($jc: center, $fd: row, $gap: 10px); 
@@ -32,8 +52,8 @@ header {
                 min-width: 350px;
             } 
         }
-    }    
-   
+    } 
+
     @include response(md) {    
         .header-container {
 
@@ -41,9 +61,18 @@ header {
                 max-width: 675px;
             }
 
-            .menu { //ta bort, bli komponent i react
-                font-size: size(lg); 
-            }
+            .navigation-bar {
+
+                .menu-list {
+
+                    .list-item {
+
+                        .list-item-name { 
+                            font-size: size(lg) * 0.875; 
+                        }
+                    }
+                }
+            }            
 
             .header-image-container {
                 min-height: 295px;
@@ -58,7 +87,7 @@ header {
             }  
         }
     }
-
+    
     @include response(lg) {
         .logo {
             width: 507px; 
@@ -67,9 +96,28 @@ header {
 
         .header-container {
 
-            .menu { //ta bort, bli komponent i react
-                font-size: size(xl); 
-            } 
+            .navigation-bar {
+                height: 100px;
+                width: 100%;
+
+                .menu-list {
+                    .list-item {
+
+                        .list-item-name {
+                            font-size: size(xl) * 1.041667; 
+
+                            &:hover {
+                                color: color(secondary); 
+                                text-decoration: underline;
+                                text-decoration-thickness: 1.5px;
+                                text-underline-offset: 5px;
+                                font-size: 55px;
+                            }
+
+                        } 
+                    }
+                }
+            }            
         }        
     }
 }
