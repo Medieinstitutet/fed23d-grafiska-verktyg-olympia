@@ -4,6 +4,8 @@ const Context = createContext<IProviderTypes | undefined>(undefined);
 
 interface IProviderTypes {
   isMobile: boolean;
+  isCookiebarOpen: boolean;
+  closeCookiebarOnClick: () => void;
 }
 
 interface IContextType {
@@ -12,6 +14,11 @@ interface IContextType {
 
 export const ContextProvider: React.FC<IContextType> = ({ children }) => {
   const [isMobile, setIsMobile] = useState(false);
+  const [isCookiebarOpen, setIsCookiebarOpen] = useState(true);
+
+  const closeCookiebarOnClick = () => {
+    setIsCookiebarOpen(false);
+  };
 
   useEffect(() => {
     const resizeWindow = () => {
@@ -30,6 +37,8 @@ export const ContextProvider: React.FC<IContextType> = ({ children }) => {
 
   const contextValue = {
     isMobile: isMobile,
+    isCookiebarOpen: isCookiebarOpen,
+    closeCookiebarOnClick: closeCookiebarOnClick,
   };
 
   return <Context.Provider value={contextValue}>{children}</Context.Provider>;
