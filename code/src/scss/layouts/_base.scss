@@ -1,0 +1,21 @@
+body {
+  @include flexCenter($jc: center);
+  background-color: color(backgroundColor);
+  color: color(primaryText);
+  font-family: $primary-font;
+}
+
+#root {
+  @include flexCenter($ai: center, $fd: column, $gap: 16px);
+  width: 100%;
+  padding: 0 12px;
+  max-width: 1180px;
+
+  @include response(md) {
+    padding: 0 35px;
+  }
+
+  @include response(lg) {
+    max-width: 1180px;
+  }
+}
