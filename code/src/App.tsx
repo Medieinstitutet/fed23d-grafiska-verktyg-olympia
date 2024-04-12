@@ -1,5 +1,7 @@
-import Header from "./components/header/Header";
-import Cookiebar from './components/cookiebar/Cookiebar';
+import Header from './components/header/Header';
+// import Cookiebar from './components/cookiebar/Cookiebar';
+import RecipeMainContainer from './components/recipe/RecipeMainContainer';
+import RecipeImage from './components/recipe/RecipeImage';
 import Footer from './components/footer/Footer';
 import { useContext } from 'react';
 import Context from './context/Context';
@@ -11,14 +13,16 @@ function App() {
 
   if (!context) return;
 
-  const { isCookiebarOpen } = context;
+  // const { isCookiebarOpen } = context;
 
   return (
     <>
       <Header />
+      <RecipeImage imageUrl="" />
+      <RecipeMainContainer />
       <About />
       <Footer />
-      {isCookiebarOpen && <Cookiebar />}
+      {/* {isCookiebarOpen && <Cookiebar />} */}
       {/*   <Lightbox /> will depend on modalState! */}
     </>
   );
