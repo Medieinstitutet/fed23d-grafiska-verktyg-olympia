@@ -2,11 +2,17 @@
 @import 'mixins/media';
 @import 'mixins/mixins';
 @import 'variables/variables';
-@import 'layouts/recipies';
+@import 'layouts/base';
 @import 'header';
+@import 'layouts/recipes';
+@import 'layouts/recipeImage';
+@import 'layouts/recipeCounter';
+@import 'layouts/recipeContainer';
+@import 'layouts/recipeMainContainer';
 @import 'layouts/footer';
 @import 'layouts/about';
 @import 'layouts/shared';
 @import 'layouts/cookie-button';
 @import 'layouts/cookiebar';
 @import 'layouts/base';
+
