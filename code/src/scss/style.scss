@@ -88,7 +88,7 @@ body {
 // ---- SHARED ---- //
 
 .divider {
-  width: 100%;
+  //width: 100%;
   background-color: color(quint);
   height: 10px;
   @include response(md) {
