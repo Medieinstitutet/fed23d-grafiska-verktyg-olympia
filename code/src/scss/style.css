@@ -16,6 +16,7 @@ body {
   gap: 0;
   background-color: #f0e8d3;
   color: #3b1e04;
+  font-family: "Playfair Display", serif;
 }
 
 #root {
@@ -23,7 +24,7 @@ body {
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  gap: 16px;
+  gap: 40px;
   width: 100%;
   padding: 0 12px;
   max-width: 1180px;
@@ -33,9 +34,35 @@ body {
     padding: 0 35px;
   }
 }
+#root .about {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 16px;
+  max-width: 400px;
+}
+@media (min-width: 744px) {
+  #root .about {
+    gap: 24px;
+    max-width: 470px;
+  }
+}
 @media (min-width: 1440px) {
-  #root {
-    max-width: 1180px;
+  #root .about {
+    max-width: 990px;
+  }
+}
+#root .about .description {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 16px;
+}
+@media (min-width: 744px) {
+  #root .about .description {
+    gap: 20px;
   }
 }
 #root footer {
@@ -125,4 +152,47 @@ body {
   .divider-ssl {
     height: 35px;
   }
+}
+
+.paragraph {
+  line-height: 1rem;
+  font-size: 0.75rem;
+  font-weight: 900;
+}
+@media (min-width: 744px) {
+  .paragraph {
+    line-height: 1.5rem;
+    font-size: 1.125rem;
+  }
+}
+@media (min-width: 1440px) {
+  .paragraph {
+    font-size: 1.5rem;
+    line-height: 1.75rem;
+  }
+}
+
+.large-heading {
+  font-size: 2.5rem;
+}
+@media (min-width: 744px) {
+  .large-heading {
+    font-size: 2rem;
+    font-weight: 700;
+  }
+}
+@media (min-width: 1440px) {
+  .large-heading {
+    font-size: 3rem;
+    font-weight: 800;
+  }
+}
+
+.lightbox {
+  width: 100vw;
+  min-height: 100vh;
+  background-color: black;
+  position: fixed;
+  opacity: 50%;
+  top: 0;
 }/*# sourceMappingURL=style.css.map */
