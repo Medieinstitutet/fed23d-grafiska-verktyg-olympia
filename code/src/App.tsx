@@ -1,3 +1,4 @@
+import Header from './components/header/Header';
 import Cookiebar from './components/cookiebar/Cookiebar';
 import RecipeMainContainer from './components/recipe/RecipeMainContainer';
 import RecipeImage from './components/recipe/RecipeImage';
@@ -16,6 +17,7 @@ function App() {
 
   return (
     <>
+      <Header />
       <RecipeImage imageUrl="" />
       <RecipeMainContainer />
       <About />
