@@ -5,7 +5,7 @@ import { aboutParagraphs } from '../../../data/Texts';
 
 const About = () => {
   return (
-    <section className="about">
+    <section className="about" id="about">
       <Heading title="About" />
       <div className="description">
         {aboutParagraphs.map(paragraph => {
