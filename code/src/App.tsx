@@ -1,3 +1,4 @@
+import Header from "./components/header/Header";
 import Cookiebar from './components/cookiebar/Cookiebar';
 import Footer from './components/footer/Footer';
 import { useContext } from 'react';
@@ -14,6 +15,7 @@ function App() {
 
   return (
     <>
+      <Header />
       <About />
       <Footer />
       {isCookiebarOpen && <Cookiebar />}
