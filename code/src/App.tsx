@@ -21,7 +21,6 @@ function App() {
     <>
       <Header />
       <main className="main-section">
-        <RecipeImage imageUrl="" />
         <RecipeMainContainer />
         <FAQ />
         <Divider />

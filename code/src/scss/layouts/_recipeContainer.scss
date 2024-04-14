@@ -1,9 +1,10 @@
 .recipe-container {
   width: 290px;
-  height: 610px;
+  height: auto;
   border: 1px solid color(primaryText);
   border-radius: 15px;
-  background-color: color(quart);
+  // background-color: color(quart);
+  background-color: pink;
 
   @include flexCenter($fd: column);
 }

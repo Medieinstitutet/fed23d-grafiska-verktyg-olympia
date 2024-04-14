@@ -1,7 +1,13 @@
 .recipe-main-container {
-  width: 320px;
-  //   height: 610px;
+  width: 100svw;
+  height: auto;
   padding: 2px;
-  // background-color: red;
-  @include flexCenter($fd: column);
+  background-color: red;
+  @include flexCenter($jc: space-between);
+
+  flex-wrap: wrap;
+
+  &__recipe {
+    width: 320px;
+  }
 }

@@ -7,7 +7,12 @@ export interface Recipe {
 
 export const Recipes: Recipe[] = [
   {
-    image: { src: '../assets/images/sourdough.jpg', alt: 'Sourdough bread cut in two pieces', width: 300, height: 300 },
+    image: {
+      src: '../src/assets/images/sourdough.jpg',
+      alt: 'Sourdough bread cut in two pieces',
+      width: 300,
+      height: 300,
+    },
     title: 'Classic Sourdough Bread',
     ingredients: [
       { amount: 1, unit: 'cup', description: 'sourdough starter' },
@@ -26,7 +31,7 @@ export const Recipes: Recipe[] = [
   },
   {
     image: {
-      src: '../assets/images/focaccia.jpg',
+      src: '../src/assets/images/focaccia.jpg',
       alt: 'three pieces of focaccia with different toppings',
       width: 300,
       height: 300,
@@ -46,7 +51,7 @@ export const Recipes: Recipe[] = [
   },
   {
     image: {
-      src: '../assets/images/wholewheat2.jpg',
+      src: '../src/assets/images/wholewheat2.jpg',
       alt: 'whole wheat bread laid out on a baking towel',
       width: 300,
       height: 300,
@@ -64,7 +69,7 @@ export const Recipes: Recipe[] = [
       'In the dance of health and flavor, this whole wheat bread is a graceful performer. Whisk together both flours, yeast, and salt in a large bowl. Warm the honey slightly, then stir it into the warm water. Add this sweet elixir to the flour mixture, stirring until a sticky dough forms. Transfer the dough to a floured surface and knead with love for about 10 minutes, until smooth and elastic. Place it in a greased bowl, cover, and let it rise in a warm spot until doubled, about 1 hour. Punch down the risen dough to release any fairy tales it might have dreamed up, then shape it into a loaf. Place it in a greased loaf pan, cover, and let it rise again until it has proudly crowned the rim of the pan, about 30 to 40 minutes. Preheat your oven to 375°F (190°C). Bake the loaf until it sings a golden tune when tapped on the bottom, about 35 minutes. Cool on a wire rack before slicing, revealing a heart of gold.',
   },
   {
-    image: { src: '../assets/images/bagels.jpg', alt: 'Bagels in a basket', width: 300, height: 300 },
+    image: { src: '../src/assets/images/bagels.jpg', alt: 'Bagels in a basket', width: 300, height: 300 },
     title: 'Sunrise Bagels',
     ingredients: [
       { amount: 4, unit: 'cups', description: 'bread flour' },
@@ -83,7 +88,12 @@ export const Recipes: Recipe[] = [
       'In the quest for the perfect breakfast companion, these bagels shine like the morning sun. Start by combining flour, sugar, salt, and yeast in a large mixing bowl. Gradually add warm water, stirring until a stiff dough forms. Turn this promising beginning onto a floured surface and knead with dedication until smooth and elastic, about 10 minutes. Divide your dough into 8 equal pieces, shaping each into a smooth ball. Press a thumb through the center of each ball to form a ring, then gently stretch the dough until the hole is about 2 inches wide. Place these nascent sunrises on a lightly oiled baking sheet, cover, and let them rest for about 10 minutes, just enough time for them to puff slightly but not rise. Meanwhile, bring a large pot of water to a boil and add the malt syrup or honey. Boil each bagel for 1 minute on each side, which gives them their characteristic chewy texture. Return them to the baking sheet, now sprinkled with cornmeal if you have it, and adorn each bagel with your chosen seeds. Preheat your oven to 425°F (220°C). Bake the bagels until they are golden brown and beautiful, about 20-25 minutes. Let them cool on a wire rack before slicing. Serve with a generous spread of cream cheese and a sprinkle of joy, starting your day with a touch of homemade happiness.',
   },
   {
-    image: { src: '../assets/images/baguette.jpg', alt: 'Pieces of baguettes in a paper bag', width: 300, height: 300 },
+    image: {
+      src: '../src/assets/images/bagette.jpg',
+      alt: 'Pieces of baguettes in a paper bag',
+      width: 300,
+      height: 300,
+    },
     title: 'Baguettes',
     ingredients: [
       { amount: 4, unit: 'cups', description: 'bread flour' },
@@ -97,7 +107,7 @@ export const Recipes: Recipe[] = [
   },
   {
     image: {
-      src: '../assets/images/raisinbread.jpg',
+      src: '../src/assets/images/raisinbread.jpg',
       alt: 'Sliced Cinnamon Raisin Bread on a cutting board',
       width: 300,
       height: 300,
