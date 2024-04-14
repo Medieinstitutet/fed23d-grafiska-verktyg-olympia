@@ -1,9 +1,9 @@
-interface RecipeImageProps {
-  imageUrl: string;
-}
+// interface RecipeImageProps {
+//   imageUrl: string;
+// }
 
-const RecipeImage = (props: RecipeImageProps) => {
-  return <div className="image-container">Hello</div>;
-};
+// const RecipeImage = (props: RecipeImageProps) => {
+//   return <div className="image-container">Hello</div>;
+// };
 
-export default RecipeImage;
+// export default RecipeImage;

@@ -20,6 +20,7 @@ const Panel = ({ height, recipe, showIngredients, showInstructions }: PanelProps
                 {ingredient.amount && <span>{ingredient.amount} </span>}
                 {ingredient.unit && <span>{ingredient.unit} </span>}
                 {ingredient.description}
+                <br />
                 {ingredient.extras && <span> ({ingredient.extras})</span>}
               </li>
             ))}
