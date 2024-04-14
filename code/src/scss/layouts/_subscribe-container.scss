@@ -72,5 +72,8 @@
     @include response(md) {
       padding: 0 16px;
     }
+    &:disabled {
+      background-color: lightgrey;
+    }
   }
 }
