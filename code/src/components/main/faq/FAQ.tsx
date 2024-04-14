@@ -3,7 +3,7 @@ import { questionsAndAnswers } from '../../../data/Texts';
 import QuestionContainer from './QuestionContainer';
 import { v4 as uuidv4 } from 'uuid';
 import Quote from '../../shared/Quote';
-import SubscriptionInput from './SubscriptionInput';
+import SubscriptionInput from './hooks/SubscriptionInput';
 
 const FAQ = () => {
   return (
