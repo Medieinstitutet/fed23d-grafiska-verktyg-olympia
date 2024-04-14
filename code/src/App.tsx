@@ -1,6 +1,5 @@
 import Header from './components/header/Header';
 import RecipeMainContainer from './components/recipe/RecipeMainContainer';
-import RecipeImage from './components/recipe/RecipeImage';
 import Footer from './components/footer/Footer';
 import { useContext } from 'react';
 import Context from './context/Context';
