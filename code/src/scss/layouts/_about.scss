@@ -6,6 +6,7 @@
     max-width: 470px;
   }
   @include response(lg) {
+    gap: 40px;
     max-width: 990px;
   }
   .description {
