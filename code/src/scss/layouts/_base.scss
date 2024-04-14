@@ -1,13 +1,17 @@
-body {
-  @include flexCenter($jc: center);
-  background-color: color(backgroundColor);
-  color: color(primaryText);
-  font-family: $primary-font;
-}
+html {
+  scroll-behavior: smooth;
 
-button,
-input {
-  font-family: $primary-font;
+  button,
+  input {
+    font-family: $primary-font;
+  }
+
+  body {
+    @include flexCenter($jc: center);
+    background-color: color(backgroundColor);
+    color: color(primaryText);
+    font-family: $primary-font;
+  }
 }
 
 #root {

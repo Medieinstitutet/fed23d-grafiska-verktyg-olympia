@@ -3,7 +3,12 @@
 @import 'mixins/mixins';
 @import 'variables/variables';
 @import 'layouts/base';
-@import 'layouts/recipies';
+@import 'header';
+@import 'layouts/recipes';
+@import 'layouts/recipeImage';
+@import 'layouts/recipeCounter';
+@import 'layouts/recipeContainer';
+@import 'layouts/recipeMainContainer';
 @import 'layouts/footer';
 @import 'layouts/about';
 @import 'layouts/shared';

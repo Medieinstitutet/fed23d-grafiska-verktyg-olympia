@@ -1,0 +1,20 @@
+.panel {
+  background-color: color(quint);
+  color: color(primaryText);
+  border: 1px solid;
+  width: 270px;
+  border-radius: 15px;
+  padding: 1rem;
+  margin: 8px;
+
+  h4 {
+    font-size: 24;
+    font-weight: bold;
+    // @include flexCenter;)
+  }
+
+  p {
+    font-size: 20;
+    font-weight: medium;
+  }
+}
