@@ -1,13 +1,10 @@
 .recipe-container {
-  width: 300px;
-  // height: 1040px;
-  border: 1px solid color(primaryText);
-  border-radius: 15px;
+  width: 18.75rem;
 
   @include flexCenter($fd: column);
 
   .recipe-title {
-    height: 150px;
+    height: 9.4rem;
     font-size: 2.25rem;
     font-weight: 900;
     font-style: italic;
@@ -20,14 +17,14 @@
 
   .recipe-image {
     position: relative;
-    width: 160px;
-    height: 160px;
+    width: 10rem;
+    height: 10rem;
     background-color: color(quart);
     overflow: hidden;
 
     @include response(sm) {
-      width: 300px;
-      height: 300px;
+      width: 18.75rem;
+      height: 18.75rem;
     }
 
     img {
@@ -45,7 +42,7 @@
 
   .recipe-details {
     background-color: color(quart);
-    border-radius: 15px;
+    border-radius: 1rem;
     padding: 1rem 0;
 
     li {

@@ -1,11 +1,11 @@
 .counter {
-  height: 52px;
-  margin: 10px 0;
+  height: 3.25rem;
+  margin: 1rem 0;
   // background-color: pink;
   @include flexCenter;
 
   input {
-    margin: 0 30px;
+    margin: 0 2rem;
     background-color: transparent;
     border: none;
     font-size: 2rem;
@@ -14,12 +14,12 @@
 
   input,
   button {
-    height: 50px;
-    width: 80px;
+    height: 3.125rem;
+    width: 5rem;
   }
 
   button {
-    width: 50px;
+    width: 3.125rem;
     background-color: color(quint);
     border: none;
     font-size: 2rem;
