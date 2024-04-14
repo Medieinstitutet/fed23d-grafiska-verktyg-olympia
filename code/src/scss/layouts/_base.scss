@@ -5,6 +5,11 @@ body {
   font-family: $primary-font;
 }
 
+button,
+input {
+  font-family: $primary-font;
+}
+
 #root {
   @include flexCenter($ai: center, $fd: column, $gap: 16px);
   width: 100%;

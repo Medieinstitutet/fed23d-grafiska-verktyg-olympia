@@ -2,10 +2,14 @@
 @import 'mixins/media';
 @import 'mixins/mixins';
 @import 'variables/variables';
+@import 'layouts/base';
 @import 'layouts/recipies';
 @import 'layouts/footer';
 @import 'layouts/about';
 @import 'layouts/shared';
-@import 'layouts/cookie-button';
 @import 'layouts/cookiebar';
-@import 'layouts/base';
+@import 'layouts/cookie-button';
+@import 'layouts/subscribe-container';
+@import 'layouts/question';
+@import 'layouts/faq';
+@import 'layouts/quote';
