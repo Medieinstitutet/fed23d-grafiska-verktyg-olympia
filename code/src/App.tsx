@@ -1,11 +1,13 @@
 import Header from './components/header/Header';
-// import Cookiebar from './components/cookiebar/Cookiebar';
 import RecipeMainContainer from './components/recipe/RecipeMainContainer';
 import RecipeImage from './components/recipe/RecipeImage';
 import Footer from './components/footer/Footer';
 import { useContext } from 'react';
 import Context from './context/Context';
 import About from './components/main/about/About';
+import FAQ from './components/main/faq/FAQ';
+import Divider from './components/shared/Divider';
+// import Cookiebar from './components/cookiebar/Cookiebar';
 /* import Lightbox from './components/shared/Lightbox'; */
 
 function App() {
@@ -18,11 +20,15 @@ function App() {
   return (
     <>
       <Header />
-      <RecipeImage imageUrl="" />
-      <RecipeMainContainer />
-      <About />
+      <main className="main-section">
+        <RecipeImage imageUrl="" />
+        <RecipeMainContainer />
+        <FAQ />
+        <Divider />
+        <About />
+      </main>
       <Footer />
-      {/* {isCookiebarOpen && <Cookiebar />} */}
+      {/* {isCookiebarOpen && <Cookiebar />}
       {/*   <Lightbox /> will depend on modalState! */}
     </>
   );

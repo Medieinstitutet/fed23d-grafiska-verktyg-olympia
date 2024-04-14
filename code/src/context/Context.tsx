@@ -6,7 +6,9 @@ interface IProviderTypes {
   isMobile: boolean;
   isDesktop: boolean;
   isCookiebarOpen: boolean;
+  isButtonEnabled: boolean;
   closeCookiebarOnClick: () => void;
+  switchEnabledStateOnChange: (inputRef: React.MutableRefObject<HTMLInputElement | null>) => void;
 }
 
 interface IContextType {
@@ -15,12 +17,9 @@ interface IContextType {
 
 export const ContextProvider: React.FC<IContextType> = ({ children }) => {
   const [isMobile, setIsMobile] = useState(false);
-  const [isDesktop, setIsDesktop] = useState(false); 
+  const [isDesktop, setIsDesktop] = useState(false);
   const [isCookiebarOpen, setIsCookiebarOpen] = useState(true);
-
-  const closeCookiebarOnClick = () => {
-    setIsCookiebarOpen(false);
-  };
+  const [isButtonEnabled, setIsButtonEnabled] = useState(false);
 
   useEffect(() => {
     const resizeWindow = () => {
@@ -38,11 +37,22 @@ export const ContextProvider: React.FC<IContextType> = ({ children }) => {
     };
   }, []);
 
+  const switchEnabledStateOnChange = (inputRef: React.MutableRefObject<HTMLInputElement | null>) => {
+    if (!inputRef.current) return;
+    setIsButtonEnabled(inputRef.current.value.trim().length > 0);
+  };
+
+  const closeCookiebarOnClick = () => {
+    setIsCookiebarOpen(false);
+  };
+
   const contextValue = {
     isMobile: isMobile,
     isDesktop: isDesktop,
     isCookiebarOpen: isCookiebarOpen,
+    isButtonEnabled: isButtonEnabled,
     closeCookiebarOnClick: closeCookiebarOnClick,
+    switchEnabledStateOnChange: switchEnabledStateOnChange,
   };
 
   return <Context.Provider value={contextValue}>{children}</Context.Provider>;

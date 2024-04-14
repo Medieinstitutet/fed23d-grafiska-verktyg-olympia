@@ -1,0 +1,15 @@
+.question {
+  line-height: 1.5rem;
+  font-weight: 900;
+  font-size: 1.125rem;
+  text-decoration: underline;
+  text-decoration-thickness: 0.5px;
+  @include response(md) {
+    line-height: 1.75rem;
+    font-size: 1.375rem;
+  }
+  @include response(lg) {
+    line-height: 2rem;
+    font-size: 2.25rem;
+  }
+}
