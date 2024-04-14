@@ -5,7 +5,7 @@ interface PanelProps {
 }
 
 const Panel = ({ height }: PanelProps) => {
-  return <div className="panel" style={{ height: height }}></div>;
+  return <div className="panel" style={{ height }}></div>;
 };
 
 export default Panel;
