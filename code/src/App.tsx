@@ -3,6 +3,7 @@ import Footer from './components/footer/Footer';
 import { useContext } from 'react';
 import Context from './context/Context';
 import About from './components/main/about/About';
+import FAQ from './components/main/faq/FAQ';
 /* import Lightbox from './components/shared/Lightbox'; */
 
 function App() {
@@ -14,6 +15,7 @@ function App() {
 
   return (
     <>
+      <FAQ />
       <About />
       <Footer />
       {isCookiebarOpen && <Cookiebar />}
