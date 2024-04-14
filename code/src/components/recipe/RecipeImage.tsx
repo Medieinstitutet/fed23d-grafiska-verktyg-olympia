@@ -1,5 +1,3 @@
-// import '../../scss/layouts/_recipeImage.scss';
-
 interface RecipeImageProps {
   imageUrl: string;
 }
