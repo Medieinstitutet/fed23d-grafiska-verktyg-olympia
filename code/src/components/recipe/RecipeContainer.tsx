@@ -6,6 +6,7 @@ const RecipeContainer = () => {
     <div className="recipe-container">
       <Panel height="250px" />
       <Panel height="290px" />
+      <h1>Test</h1>
     </div>
   );
 };
