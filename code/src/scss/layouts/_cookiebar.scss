@@ -3,7 +3,7 @@
   height: 170px;
   padding: 16px 10px;
   background-color: color(quart);
-  position: absolute;
+  position: fixed;
   bottom: 0;
   @include response(md) {
     height: 185px;
@@ -39,7 +39,6 @@
     }
     .buttons-panel {
       height: 100%;
-
       @include flexCenter($gap: 24px, $ai: flex-end);
       @include response(md) {
         @include flexCenter($fd: column, $jc: space-between);

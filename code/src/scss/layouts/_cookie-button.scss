@@ -3,6 +3,7 @@
   height: 50px;
   border-radius: 10px;
   font-size: 2rem;
+
   cursor: pointer;
   @include flexCenter($jc: center, $ai: center);
   @include response(md) {
@@ -11,6 +12,7 @@
   }
   &.accept {
     background-color: color(tertiary);
+    color: color(primaryText);
     &:hover {
       background-color: color(quart);
     }
