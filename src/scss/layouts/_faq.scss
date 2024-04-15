@@ -1,0 +1,24 @@
+.faq-container {
+  @include flexCenter($fd: column, $gap: 24px);
+  @include response(md) {
+    gap: 40px;
+    max-width: 680px;
+  }
+  @include response(lg) {
+    max-width: 100%;
+    gap: 60px;
+  }
+
+  .faq-wrapper {
+    @include flexCenter($fd: column, $gap: 20px);
+    .faq-panel {
+      @include flexCenter($fd: column, $gap: 16px, $ai: flex-start);
+      @include response(md) {
+        gap: 16px;
+      }
+      @include response(lg) {
+        gap: 24px;
+      }
+    }
+  }
+}

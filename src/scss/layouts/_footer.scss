@@ -1,0 +1,49 @@
+footer {
+  @include flexCenter($ai: center, $fd: column, $gap: 12px);
+  height: 140px;
+
+  width: 100%;
+  font-size: 0.875rem;
+  font-weight: 600;
+  line-height: 2rem;
+  padding: 6px 8px;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: color(quint);
+
+  .footer-mobile {
+    width: 100%;
+    @include flexCenter($ai: center, $jc: space-between, $fd: row);
+  }
+
+  @include response(md) {
+    height: 120px;
+    font-size: 1.125rem;
+    padding: 20px 16px;
+    @include flexCenter($fd: row, $jc: space-between);
+  }
+
+  @include response(lg) {
+    font-size: 1.5rem;
+    height: 120px;
+  }
+
+  .address,
+  .social-media {
+    height: 100%;
+  }
+
+  .address {
+    @include flexCenter($fd: column);
+  }
+  .social-media {
+    @include flexCenter($gap: 4px);
+  }
+  .footer-right,
+  .footer-left {
+    @include flexCenter($ai: center, $fd: column, $jc: space-between);
+  }
+  .footer-left {
+    @include flexCenter($ai: center, $fd: column, $jc: space-between);
+  }
+}
