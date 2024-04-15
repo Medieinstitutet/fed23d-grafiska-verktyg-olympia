@@ -1,6 +1,7 @@
 export interface Recipe {
   image: { src: string; alt: string; width: number; height: number };
   title: string;
+  servings: number;
   ingredients: { amount?: number; unit?: string; description: string; extras?: string }[];
   instructions: string;
 }
@@ -14,6 +15,7 @@ export const Recipes: Recipe[] = [
       height: 300,
     },
     title: 'Classic Sourdough Bread',
+    servings: 1,
     ingredients: [
       { amount: 1, unit: 'cup', description: 'sourdough starter' },
       { amount: 1.5, unit: 'cups', description: 'warm water' },
@@ -37,6 +39,7 @@ export const Recipes: Recipe[] = [
       height: 300,
     },
     title: 'Quick Olive Oil & Rosemary Focaccia',
+    servings: 1,
     ingredients: [
       { amount: 2.75, unit: 'cups', description: 'all-purpose flour' },
       { amount: 1, unit: 'tsp', description: 'sugar' },
@@ -57,6 +60,7 @@ export const Recipes: Recipe[] = [
       height: 300,
     },
     title: 'Hearty Whole Wheat Bread',
+    servings: 1,
     ingredients: [
       { amount: 2, unit: 'cups', description: 'whole wheat flour' },
       { amount: 1, unit: 'cup', description: 'all-purpose flour' },
@@ -71,6 +75,7 @@ export const Recipes: Recipe[] = [
   {
     image: { src: '../src/assets/images/bagels.jpg', alt: 'Bagels in a basket', width: 300, height: 300 },
     title: 'Sunrise Bagels',
+    servings: 1,
     ingredients: [
       { amount: 4, unit: 'cups', description: 'bread flour' },
       { amount: 1, unit: 'tbsp', description: 'sugar' },
@@ -95,6 +100,7 @@ export const Recipes: Recipe[] = [
       height: 300,
     },
     title: 'Baguettes',
+    servings: 1,
     ingredients: [
       { amount: 4, unit: 'cups', description: 'bread flour' },
       { amount: 1.5, unit: 'tsp', description: 'salt' },
@@ -113,6 +119,7 @@ export const Recipes: Recipe[] = [
       height: 300,
     },
     title: 'Cinnamon Raisin Bread',
+    servings: 1,
     ingredients: [
       { amount: 3, unit: 'cups', description: 'all-purpose flour' },
       { amount: 1, unit: 'packet', description: 'active dry yeast' },
@@ -126,3 +133,13 @@ export const Recipes: Recipe[] = [
       'For those mornings when only something sweet will do, cinnamon raisin bread offers comfort and joy. Start by dissolving yeast in warm milk, then add sugar, salt, and flour, stirring to form a soft dough. Knead on a floured surface, incorporating raisins and cinnamon as you fold the dough over itself, until everything is well mixed and the dough is smooth. Place the dough in a greased bowl, covering it with a clean kitchen towel, and let it rise in a warm spot until it has doubled in size, about 1 hour. Punch down the dough, then shape it into a loaf. Place it in a greased loaf pan, cover, and let it rise again until puffy, about 45 minutes. Preheat your oven to 350°F (175°C). Bake the bread until it’s golden and a toothpick inserted into the center comes out clean, about 30 to 35 minutes. Cool in the pan for a few minutes, then transfer to a wire rack to cool completely. Slice to reveal the swirls of cinnamon and raisins, a sweet start to any day.',
   },
 ];
+
+export function adjustIngredientAmounts(recipe: Recipe, servings: number): Recipe {
+  const newIngredientAmount = servings / recipe.servings;
+  const adjustedIngredients = recipe.ingredients.map(ingredient => ({
+    ...ingredient,
+    amount: ingredient.amount ? ingredient.amount * newIngredientAmount : undefined,
+  }));
+
+  return { ...recipe, servings, ingredients: adjustedIngredients };
+}
