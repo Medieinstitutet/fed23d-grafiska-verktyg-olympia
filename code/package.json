@@ -3,6 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
+  "homepage": "https://medieinstitutet.github.io/code/fed23d-grafiska-verktyg-olympia/",
   "scripts": {
     "dev": "vite",
     "predeploy": "npm run build",
