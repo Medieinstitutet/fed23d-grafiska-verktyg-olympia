@@ -10,13 +10,8 @@
     border: none;
     font-size: 2rem;
     text-align: center;
+    @include appearance(textfield);
   }
-
-  // .no-spinner::-webkit-inner-spin-button,
-  // .no-spinner::-webkit-outer-spin-button {
-  //   -webkit-appearance: none;
-  //   margin: 0;
-  // }
 
   input,
   button {
@@ -28,6 +23,6 @@
     width: 3.125rem;
     background-color: color(quint);
     border: none;
-    font-size: 2rem;
+    font-size: 1.75rem;
   }
 }

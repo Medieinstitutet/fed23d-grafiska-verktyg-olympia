@@ -3,6 +3,7 @@ import Panel from './Panel';
 import { Recipe, adjustIngredientAmounts } from '../../data/Recipes';
 import RecipeCounter from './RecipeCounter.tsx';
 import Context from '../../context/Context.tsx';
+import Lightbox from '../shared/Lightbox.tsx';
 
 interface Props {
   recipe: Recipe;
@@ -10,6 +11,7 @@ interface Props {
 
 const RecipeContainer = ({ recipe: initialRecipe }: Props) => {
   const [recipe, setRecipe] = useState(initialRecipe);
+  const [showModal, setShowModal] = useState(false);
   const context = useContext(Context);
   if (!context) return;
 
@@ -20,15 +22,17 @@ const RecipeContainer = ({ recipe: initialRecipe }: Props) => {
     setRecipe(adjustedRecipe);
   };
 
+  const toggleModal = () => setShowModal(!showModal);
+
   return (
     <div className="recipe-container">
       {isMobile ? (
-        <div className="recipe-image">
+        <button className="recipe-image" onClick={toggleModal}>
           <img src={recipe.image.src} alt={recipe.image.alt} width={recipe.image.width} height={recipe.image.height} />
           <div className="overlay">
             <div className="recipe-title">{recipe.title}</div>
           </div>
-        </div>
+        </button>
       ) : (
         <>
           <div className="recipe-title">{recipe.title}</div>
@@ -47,6 +51,17 @@ const RecipeContainer = ({ recipe: initialRecipe }: Props) => {
           </div>
         </>
       )}
+
+      <Lightbox isOpen={showModal} onClose={toggleModal}>
+        <div className="recipe-title">{recipe.title}</div>
+        <RecipeCounter onServingsChange={handleServingsChange} />
+        <div className="recipe-container">
+          <div className="recipe-details">
+            <Panel height="45%" recipe={recipe} showIngredients />
+            <Panel height="55%" recipe={recipe} showInstructions />
+          </div>
+        </div>
+      </Lightbox>
     </div>
   );
 };
