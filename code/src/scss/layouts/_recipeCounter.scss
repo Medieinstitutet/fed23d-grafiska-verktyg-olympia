@@ -1,7 +1,6 @@
 .counter {
   height: 3.25rem;
   margin: 1rem 0;
-  // background-color: pink;
   @include flexCenter;
 
   input {

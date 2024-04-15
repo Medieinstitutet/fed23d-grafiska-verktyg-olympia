@@ -13,7 +13,7 @@ const Panel = ({ height, recipe, showIngredients, showInstructions }: PanelProps
     <div className="panel" style={{ height }}>
       {showIngredients && (
         <>
-          <h3>Ingredients:</h3>
+          <h3>Ingredients</h3>
           <ul>
             {recipe.ingredients.map((ingredient, index) => (
               <li key={index}>
@@ -29,7 +29,7 @@ const Panel = ({ height, recipe, showIngredients, showInstructions }: PanelProps
       )}
       {showInstructions && (
         <>
-          <h3>Instructions:</h3>
+          <h3>Instructions</h3>
           <p>{recipe.instructions}</p>
         </>
       )}

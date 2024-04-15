@@ -4,7 +4,7 @@ import { Recipe } from '../../data/Recipes';
 import RecipeCounter from './RecipeCounter.tsx';
 
 interface Props {
-  recipe: Recipe; // Define the type of the recipe prop
+  recipe: Recipe;
 }
 
 const RecipeContainer = ({ recipe }: Props) => {
