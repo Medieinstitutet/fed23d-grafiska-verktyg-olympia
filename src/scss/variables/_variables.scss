@@ -1,0 +1,39 @@
+$colors: (
+  backgroundColor: #f0e8d3,
+  primaryText: #3b1e04,
+  secondary: #854811,
+  tertiary: #d4af7a,
+  quart: #c69962,
+  quint: #e7d5ae,
+);
+
+@function color($color-name) {
+  @return map-get($colors, $color-name);
+}
+
+$primary-font: 'Playfair Display', serif;
+
+$font-sizes: (
+  xl: 3rem,
+  lg: 2.5rem,
+  md: 2rem,
+  sm: 1.5rem,
+  xs: 1rem,
+);
+
+@function size($size) {
+  @return map-get($font-sizes, $size);
+}
+
+%fullspace {
+  width: 100%;
+  height: 100%;
+}
+
+$debugging: true;
+
+div {
+  @if $debugging {
+    outline: 1px solid hotpink;
+  }
+}
