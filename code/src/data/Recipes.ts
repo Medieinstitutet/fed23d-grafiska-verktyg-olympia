@@ -18,8 +18,8 @@ export const Recipes: Recipe[] = [
     servings: 1,
     ingredients: [
       { amount: 1, unit: 'cup', description: 'sourdough starter' },
-      { amount: 1.5, unit: 'cups', description: 'warm water' },
-      { amount: 3.5, unit: 'cups', description: 'bread flour' },
+      { amount: 1.5, unit: 'cup', description: 'warm water' },
+      { amount: 3.5, unit: 'cup', description: 'bread flour' },
       { amount: 2, unit: 'tsp', description: 'salt' },
       {
         amount: 0.25,
@@ -41,7 +41,7 @@ export const Recipes: Recipe[] = [
     title: 'Quick Olive Oil & Rosemary Focaccia',
     servings: 1,
     ingredients: [
-      { amount: 2.75, unit: 'cups', description: 'all-purpose flour' },
+      { amount: 2.75, unit: 'cup', description: 'all-purpose flour' },
       { amount: 1, unit: 'tsp', description: 'sugar' },
       { amount: 2, unit: 'tsp', description: 'salt' },
       { amount: 1, unit: 'tbsp', description: 'fresh rosemary, chopped' },
@@ -62,11 +62,11 @@ export const Recipes: Recipe[] = [
     title: 'Hearty Whole Wheat Bread',
     servings: 1,
     ingredients: [
-      { amount: 2, unit: 'cups', description: 'whole wheat flour' },
+      { amount: 2, unit: 'cup', description: 'whole wheat flour' },
       { amount: 1, unit: 'cup', description: 'all-purpose flour' },
       { amount: 0.25, unit: 'cup', description: 'honey' },
       { amount: 1, unit: 'packet', description: 'instant yeast' },
-      { amount: 1.5, unit: 'cups', description: 'warm water' },
+      { amount: 1.5, unit: 'cup', description: 'warm water' },
       { amount: 1, unit: 'tsp', description: 'salt' },
     ],
     instructions:
@@ -77,11 +77,11 @@ export const Recipes: Recipe[] = [
     title: 'Sunrise Bagels',
     servings: 1,
     ingredients: [
-      { amount: 4, unit: 'cups', description: 'bread flour' },
+      { amount: 4, unit: 'cup', description: 'bread flour' },
       { amount: 1, unit: 'tbsp', description: 'sugar' },
       { amount: 2, unit: 'tsp', description: 'salt' },
       { amount: 1, unit: 'packet', description: 'instant yeast' },
-      { amount: 1.25, unit: 'cups', description: 'warm water' },
+      { amount: 1.25, unit: 'cup', description: 'warm water' },
       {
         amount: 1,
         unit: 'tbsp',
@@ -102,11 +102,11 @@ export const Recipes: Recipe[] = [
     title: 'Baguettes',
     servings: 1,
     ingredients: [
-      { amount: 4, unit: 'cups', description: 'bread flour' },
+      { amount: 4, unit: 'cup', description: 'bread flour' },
       { amount: 1.5, unit: 'tsp', description: 'salt' },
       { amount: 1, unit: 'tsp', description: 'sugar' },
       { amount: 1, unit: 'packet', description: 'active dry yeast' },
-      { amount: 1.33, unit: 'cups', description: 'warm water', extras: 'Cornmeal for dusting' },
+      { amount: 1.25, unit: 'cup', description: 'warm water', extras: 'Cornmeal for dusting' },
     ],
     instructions:
       'The baguette, a symbol of simplicity and elegance, begins with whisking flour, salt, sugar, and yeast in a large bowl. Gradually add warm water, mixing until a dough forms. Knead on a lightly floured surface until smooth and elastic, about 10 minutes. Place the dough in a greased bowl, cover, and let rise in a warm, draft-free area until doubled, about 1 hour. Gently deflate the dough, then divide into two pieces. Roll each into a long, slender loaf, reminiscent of a Parisian afternoon. Place the loaves on a baking sheet dusted with cornmeal, cover lightly, and let them rise again until puffy, about 30 minutes. With a sharp knife, make diagonal slashes along the tops of the loaves for that classic baguette look. Preheat your oven to 450°F (230°C). Bake the loaves until golden and crispy, about 25 minutes, listening for the crackle of the crust as they cool. Slice and serve as the perfect accompaniment to any meal, transporting you to the heart of France with every bite.',
@@ -121,7 +121,7 @@ export const Recipes: Recipe[] = [
     title: 'Cinnamon Raisin Bread',
     servings: 1,
     ingredients: [
-      { amount: 3, unit: 'cups', description: 'all-purpose flour' },
+      { amount: 3, unit: 'cup', description: 'all-purpose flour' },
       { amount: 1, unit: 'packet', description: 'active dry yeast' },
       { amount: 1, unit: 'cup', description: 'warm milk' },
       { amount: 0.25, unit: 'cup', description: 'sugar' },
