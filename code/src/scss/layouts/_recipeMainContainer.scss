@@ -1,5 +1,5 @@
 .recipe-main-container {
-  width: 90svw;
+  width: 80svw;
   @include flexCenter($jc: space-between);
   flex-wrap: wrap;
 }

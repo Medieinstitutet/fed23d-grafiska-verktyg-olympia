@@ -42,8 +42,8 @@ const RecipeContainer = ({ recipe: initialRecipe }: Props) => {
           </div>
           <RecipeCounter onServingsChange={handleServingsChange} />
           <div className="recipe-details">
-            <Panel height="250px" recipe={recipe} showIngredients />
-            <Panel height="250px" recipe={recipe} showInstructions />
+            <Panel height="45%" recipe={recipe} showIngredients />
+            <Panel height="55%" recipe={recipe} showInstructions />
           </div>
         </>
       )}

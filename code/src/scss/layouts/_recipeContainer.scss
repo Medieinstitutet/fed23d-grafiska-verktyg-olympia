@@ -1,15 +1,17 @@
 .recipe-container {
   @include flexCenter($fd: column);
-  width: 50%;
+  // width: 40svw;
   // @include response(lg) {
   //   width: 18.75rem;
   // }
 
   @include response(md) {
-    width: 30%;
+    width: 25svw;
+
     .recipe-title {
+      width: 90%;
       height: 9.4rem;
-      font-size: 2.25rem;
+      font-size: 1.5rem;
       font-weight: 900;
       font-style: italic;
       text-align: center;
@@ -20,6 +22,12 @@
     }
   }
 
+  @include response(lg) {
+    width: 25svw;
+    .recipe-title {
+      width: 75%;
+    }
+  }
   .recipe-image {
     position: relative;
     width: 10rem;
@@ -28,7 +36,7 @@
     margin-bottom: 1rem;
 
     @include response(md) {
-      width: 12.5rem;
+      width: 14rem;
       height: 12.5rem;
     }
 
@@ -71,11 +79,12 @@
   }
 
   .recipe-details {
-    width: 205px;
+    width: 14rem;
+    height: 80svh;
     background-color: color(quart);
     border-radius: 1rem;
     padding: 1rem 0;
-
+    @include flexCenter($fd: column);
     h3 {
       text-align: center;
       padding-bottom: 1rem;
@@ -84,9 +93,14 @@
     li {
       list-style: none;
     }
-  }
 
-  .panel {
-    width: 190px;
+    @include response(lg) {
+      width: 18.75rem;
+      // height: 18.75rem;
+    }
+
+    .panel {
+      width: 93%;
+    }
   }
 }
