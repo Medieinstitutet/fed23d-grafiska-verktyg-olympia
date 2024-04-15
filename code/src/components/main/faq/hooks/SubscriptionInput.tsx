@@ -12,13 +12,14 @@ const SubscriptionInput = () => {
 
   return (
     <form className="subscription-panel">
+      <h4 className="subscription-heading">Never miss a new recipe!</h4>
       <input
         onChange={() => {
           switchEnabledStateOnChange(inputRef);
         }}
         ref={inputRef}
         type="text"
-        placeholder="mail"
+        placeholder="Your e-mail"
       />
       <SubscribeButton />
     </form>
