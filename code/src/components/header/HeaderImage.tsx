@@ -1,5 +1,5 @@
-import HeaderImage from '../../assets/images/headerimage-tab-mob.jpg'
-import HeaderImageDesktop from '../../assets/images/headerbread.jpg';
+import HeaderImage from '../../assets/images/headerimage-tab-mob.webp'
+import HeaderImageDesktop from '../../assets/images/headerbread.webp';
 import Context from '../../context/Context'; 
 import { useContext } from 'react';
 

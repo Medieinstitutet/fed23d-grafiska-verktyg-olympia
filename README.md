@@ -14,18 +14,18 @@
 ### Build Tools
 
 - Vite
-- Github pages
+- GitHub Pages
 
 ## Formatting
 
-This projects uses code standards by applying the eslint and prettier tools:
+This project uses code standards by applying the Eslint and Prettier tools:
 
 - **Eslint**: identifies bugs and patterns to make the code more consistent.
 - **Prettier**: code formatter for making the code more readable and consistent.
 
 ## Status
 
-This project is marked as "In Progress"
+This project is marked as "In Progress".
 
 ## Getting Started
 
@@ -38,17 +38,17 @@ To run the Gridsock-Game web application on you local machine, follow these step
 
 ## App Description
 
-This was an assignment where one group (olympia) made a design in figma and another one (amorella) transformed the wireframe to a working application. The theme that olympia picked was for bread recipes, official title is all about bread. The focus in the assignment was on ui and not on interactivity, though some are still implemented.
+This was an assignment where one group (Olympia) made a design in Figma and another one (Amorella - our group) transformed the wireframe to a working application. The theme that Olympia picked was for bread recipes, official title is 'All About Bread'. The focus in the assignment was on UI and not on interactivity, though some are still implemented.
 
 ## Features
 
-- **Wireframe**: Wireframe in figma with a design system.
-- **Header**: Features header with all about bread logo.
+- **Wireframe**: Wireframe in Figma with a design system.
+- **Header**: Features header with 'All About Bread' logo.
 - **Recipes**: Section where recipes is displayed. Users can interact with a counter for each recipe.
 - **FAQ**: Frequent answers and questions section.
 - **About**: A paragraph about the company.
 - **Footer**: In the footer we have address, email and social media icons.
-- **Cookie-Bar**: Cookie-bar that can be interacted with to close it.
+- **Cookie-bar**: Cookie-bar that can be interacted with to close it.
 
 ## Authors
 
