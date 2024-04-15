@@ -10,7 +10,7 @@ const Footer = () => {
   const { isMobile } = context;
 
   return (
-    <footer>
+    <footer  id="contact">
       <Address />
       {isMobile ? (
         <div className="contact">

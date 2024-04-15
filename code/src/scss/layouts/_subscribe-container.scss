@@ -1,21 +1,39 @@
 .subscription-panel {
   border-radius: 6px;
   position: relative;
-  height: 30px;
+  height: 35px;
   width: 100%;
   max-width: 350px;
   font-weight: 500;
+  margin-bottom: 30px;
 
   @include response(md) {
     height: 40px;
     max-width: 450px;
     padding: 0 12px;
   }
+
   @include response(lg) {
     height: 50px;
     max-width: 500px;
     padding: 0 12px;
   }
+  
+  .subscription-heading {
+    text-align: center;
+    font-size: 1.25rem;
+    margin-bottom: 10px;
+
+    @include response(md) {
+      font-size: size(sm);
+    }
+
+    @include response(lg) {
+      font-size: size(lg);
+      margin-bottom: 15px;
+    }
+  }
+
   input {
     height: 100%;
     width: 100%;
@@ -41,10 +59,12 @@
       color: color(primaryText);
       opacity: 70%;
     }
+
     @include response(md) {
       font-size: 1.25rem;
       padding: 0 12px;
     }
+
     @include response(md) {
       padding: 0 16px;
     }
@@ -62,18 +82,25 @@
     font-weight: 500;
     font-size: 0.875rem;
     cursor: pointer;
+
     &:hover {
       background-color: color(quart);
     }
+
     @include response(md) {
       font-size: 1.25rem;
       padding: 0 12px;
     }
+
     @include response(md) {
       padding: 0 16px;
     }
+
     &:disabled {
       background-color: lightgrey;
+      //background-color: color(primaryText);
+      color: rgb(90, 90, 90); 
+      border: 1px solid #909090; 
     }
   }
 }
