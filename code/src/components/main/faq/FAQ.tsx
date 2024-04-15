@@ -7,7 +7,7 @@ import SubscriptionInput from './hooks/SubscriptionInput';
 
 const FAQ = () => {
   return (
-    <section className="faq-container">
+    <section className="faq-container" id="faq">
       <Quote />
       <SubscriptionInput />
       <Heading title="FAQ" />
