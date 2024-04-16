@@ -12,7 +12,7 @@ const SubscriptionInput = () => {
 
   return (
     <form className="subscription-panel">
-      <h4 className="subscription-heading">Never miss a new recipe!</h4>
+      <h2 className="subscription-heading">Never miss a new recipe!</h2>
       <input
         onChange={() => {
           switchEnabledStateOnChange(inputRef);
