@@ -13,15 +13,17 @@ const SubscriptionInput = () => {
   return (
     <form className="subscription-panel">
       <h2 className="subscription-heading">Never miss a new recipe!</h2>
-      <input
-        onChange={() => {
-          switchEnabledStateOnChange(inputRef);
-        }}
-        ref={inputRef}
-        type="text"
-        placeholder="Your e-mail"
-      />
-      <SubscribeButton />
+      <div className="input-wrapper">
+        <input
+          onChange={() => {
+            switchEnabledStateOnChange(inputRef);
+          }}
+          ref={inputRef}
+          type="text"
+          placeholder="Your e-mail"
+        />
+        <SubscribeButton />
+      </div>
     </form>
   );
 };
