@@ -15,9 +15,7 @@
       font-weight: 900;
       font-style: italic;
       text-align: center;
-      display: flex;
-      align-items: center;
-      justify-content: center;
+      @include flexCenter;
       padding: 1rem;
     }
   }
@@ -63,7 +61,6 @@
       justify-content: center;
       background-color: rgba(0, 0, 0, 0.4);
       color: color(backgroundColor);
-      opacity: 1;
     }
 
     .recipe-title {
