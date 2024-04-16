@@ -4,16 +4,16 @@ import Context from '../../context/Context';
 import { useContext } from 'react';
 
 const HeaderImageComponent = () => {
-    const context = useContext(Context);
-    if (!context) return; 
+	const context = useContext(Context);
+	if (!context) return; 
 
-    const { isDesktop } = context; 
+	const { isDesktop } = context; 
 
-    return (
-        <div className="header-image-container">
-            <img className="header-image" src={isDesktop ?  HeaderImageDesktop : HeaderImage} alt="Heading photo of sourdough bread" width="295" height="211" /> 
-        </div>    
-    );
-  };
-  
-  export default HeaderImageComponent;
+	return (
+		<div className="header-image-container">
+			<img className="header-image" src={isDesktop ?  HeaderImageDesktop : HeaderImage} alt="Heading photo of sourdough bread" width="295" height="211" /> 
+		</div>    
+	);
+};
+
+export default HeaderImageComponent;
