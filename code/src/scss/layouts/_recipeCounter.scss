@@ -10,13 +10,13 @@
     border: none;
     font-size: 2rem;
     text-align: center;
-    @include appearance(textfield);
+    @include inputAppearance(textfield);
   }
 
   input,
   button {
     height: 3.125rem;
-    width: 5rem;
+    width: 3rem;
   }
 
   button {

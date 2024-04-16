@@ -1,12 +1,13 @@
 .recipe-container {
   @include flexCenter($fd: column);
-  // width: 40svw;
+  width: 50%;
   // @include response(lg) {
-  //   width: 18.75rem;
+  // width: 250px;
+  // width: 250svw;
   // }
 
   @include response(md) {
-    width: 25svw;
+    width: 33%;
 
     .recipe-title {
       width: 90%;
@@ -20,11 +21,9 @@
     }
   }
 
-  @include response(lg) {
-    width: 25svw;
-    .recipe-title {
-      width: 75%;
-    }
+  .recipe-wrapper {
+    // width: 80%;
+    @include flexCenter($fd: column);
   }
   .recipe-image {
     position: relative;
@@ -34,7 +33,7 @@
     margin-bottom: 1rem;
 
     @include response(md) {
-      width: 14rem;
+      width: 12.5rem;
       height: 12.5rem;
     }
 
@@ -71,17 +70,18 @@
 
     &:hover {
       transform: scale(1.0333);
-      cursor: pointer;
     }
   }
 
   .recipe-details {
-    width: 14rem;
+    // width: 14rem;
+    width: 95%;
     height: 80svh;
     background-color: color(quart);
     border-radius: 1rem;
     padding: 1rem 0;
     @include flexCenter($fd: column);
+
     h3 {
       text-align: center;
       padding-bottom: 1rem;
@@ -91,6 +91,10 @@
       list-style: none;
     }
 
+    @include response(md) {
+      width: 12.75rem;
+      // width: 95%;
+    }
     @include response(lg) {
       width: 18.75rem;
     }
@@ -103,7 +107,7 @@
       border-radius: 15px;
       padding: 1rem;
       margin: 8px;
-      overflow: hidden;
+      overflow: auto;
     }
   }
 
@@ -118,8 +122,25 @@
     z-index: 10;
 
     &-content {
-      background-color: color(quint);
+      min-width: 70svw;
+      background-color: color(backgroundColor);
       @include flexCenter($fd: column);
+
+      .recipe-container {
+        // width: 80svw;
+        // max-width: 450px;
+        min-width: 55svw;
+      }
+
+      .recipe-details {
+        // width: 65svw;
+        // max-width: 440px;
+        min-width: 55svw;
+      }
+      .panel {
+        // width: 60svw;W
+        max-width: 420px;
+      }
     }
   }
 }

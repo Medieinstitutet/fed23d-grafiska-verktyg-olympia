@@ -25,7 +25,7 @@ const RecipeContainer = ({ recipe: initialRecipe }: Props) => {
   const toggleModal = () => setShowModal(!showModal);
 
   return (
-    <div className="recipe-container">
+    <div className="recipe-wrapper">
       {isMobile ? (
         <button className="recipe-image" onClick={toggleModal}>
           <img src={recipe.image.src} alt={recipe.image.alt} width={recipe.image.width} height={recipe.image.height} />
@@ -54,9 +54,9 @@ const RecipeContainer = ({ recipe: initialRecipe }: Props) => {
 
       <Lightbox isOpen={showModal} onClose={toggleModal}>
         <div className="recipe-container">
+          <div className="recipe-title">{recipe.title}</div>
+          <RecipeCounter onServingsChange={handleServingsChange} />
           <div className="recipe-details">
-            <div className="recipe-title">{recipe.title}</div>
-            <RecipeCounter onServingsChange={handleServingsChange} />
             <Panel height="45%" recipe={recipe} showIngredients />
             <Panel height="55%" recipe={recipe} showInstructions />
           </div>
