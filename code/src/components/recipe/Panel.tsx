@@ -34,7 +34,7 @@ function decimalToFraction(decimal: number) {
 
 const Panel = ({ height, recipe, showIngredients, showInstructions }: PanelProps) => {
   return (
-    <div className="panel" style={{ height }}>
+    <div className="panel invisible-scrollbar" style={{ height }}>
       {showIngredients && (
         <>
           <h3>Ingredients</h3>

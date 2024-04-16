@@ -13,6 +13,12 @@
     @include inputAppearance(textfield);
   }
 
+  .no-spinner::-webkit-inner-spin-button,
+  .no-spinner::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+
   input,
   button {
     height: 3.125rem;
@@ -24,5 +30,6 @@
     background-color: color(quint);
     border: none;
     font-size: 1.75rem;
+    cursor: pointer;
   }
 }
