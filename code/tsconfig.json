@@ -20,6 +20,6 @@
     "noUnusedParameters": true,
     "noFallthroughCasesInSwitch": true
   },
-  "include": ["src"],
+  "include": ["src", "../src/data/Recipes.ts", "../src/components/recipe/recipe", "../src/components/recipe/Panel.tsx"],
   "references": [{ "path": "./tsconfig.node.json" }]
 }
