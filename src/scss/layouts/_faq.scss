@@ -11,6 +11,12 @@
 
   .faq-wrapper {
     @include flexCenter($fd: column, $gap: 20px);
+    @include response(md) {
+      gap: 30px;
+    }
+    @include response(lg) {
+      gap: 60px;
+    }
     .faq-panel {
       @include flexCenter($fd: column, $gap: 16px, $ai: flex-start);
       @include response(md) {

@@ -1,11 +1,11 @@
 .divider {
-  width: 100%;
+  width: 91.3%;
   height: 10px;
-  max-width: 990px;
   background-color: color(quint);
-
+  min-width: 350px;
   @include response(md) {
     height: 20px;
+    max-width: 675px;
   }
   @include response(lg) {
     height: 35px;

@@ -4,11 +4,10 @@
   line-height: 1rem;
   background-color: color(quint);
   width: 100%;
-  max-width: 350px;
   padding: 12px 16px;
   @include flexCenter($fd: column, $ai: flex-start, $gap: 8px);
   @include response(md) {
-    max-width: 600px;
+    line-height: 1.5rem;
     padding: 12px 24px;
     font-size: 1.5rem;
     gap: 12px;
