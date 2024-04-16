@@ -1,5 +1,4 @@
 import Panel from './Panel';
-// import '../../scss/layouts/_recipeContainer.scss';
 
 const RecipeContainer = () => {
   return (

@@ -1,5 +1,3 @@
-// import '../../scss/layouts/_recipeContainer.scss';
-
 interface PanelProps {
   height: string;
 }
