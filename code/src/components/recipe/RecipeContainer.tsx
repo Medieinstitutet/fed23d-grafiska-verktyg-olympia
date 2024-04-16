@@ -53,10 +53,10 @@ const RecipeContainer = ({ recipe: initialRecipe }: Props) => {
       )}
 
       <Lightbox isOpen={showModal} onClose={toggleModal}>
-        <div className="recipe-title">{recipe.title}</div>
-        <RecipeCounter onServingsChange={handleServingsChange} />
         <div className="recipe-container">
           <div className="recipe-details">
+            <div className="recipe-title">{recipe.title}</div>
+            <RecipeCounter onServingsChange={handleServingsChange} />
             <Panel height="45%" recipe={recipe} showIngredients />
             <Panel height="55%" recipe={recipe} showInstructions />
           </div>
