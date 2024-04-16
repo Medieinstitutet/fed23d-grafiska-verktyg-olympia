@@ -1,0 +1,179 @@
+.recipe-container {
+  @include flexCenter($fd: column);
+  width: 50%;
+  // @include response(lg) {
+  // width: 250px;
+  // width: 250svw;
+  // }
+
+  @include response(md) {
+    width: 33%;
+
+    .recipe-title {
+      width: 90%;
+      height: 9.4rem;
+      font-size: 1.5rem;
+      font-weight: 900;
+      font-style: italic;
+      text-align: center;
+      @include flexCenter;
+      padding: 1rem;
+    }
+  }
+
+  .recipe-wrapper {
+    // width: 80%;
+    @include flexCenter($fd: column);
+  }
+  .recipe-image {
+    position: relative;
+    width: 10rem;
+    height: 10rem;
+    overflow: hidden;
+    margin-bottom: 1rem;
+
+    @include response(md) {
+      width: 12.5rem;
+      height: 12.5rem;
+    }
+
+    @include response(lg) {
+      width: 18.75rem;
+      height: 18.75rem;
+    }
+
+    img {
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+      transition: transform 0.3s ease;
+    }
+
+    .overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: rgba(0, 0, 0, 0.4);
+      color: color(backgroundColor);
+    }
+
+    .recipe-title {
+      font-size: 1.2rem;
+      font-weight: bold;
+      text-align: center;
+    }
+
+    &:hover {
+      transform: scale(1.0333);
+    }
+  }
+
+  .recipe-details {
+    // width: 14rem;
+    width: 95%;
+    height: 80svh;
+    background-color: color(quart);
+    border-radius: 1rem;
+    padding: 1rem 0;
+    @include flexCenter($fd: column);
+
+    h3 {
+      text-align: center;
+      padding-bottom: 1rem;
+    }
+
+    li {
+      list-style: none;
+    }
+
+    @include response(md) {
+      width: 12.75rem;
+      // width: 95%;
+    }
+    @include response(lg) {
+      width: 18.75rem;
+    }
+
+    .panel {
+      width: 93%;
+      background-color: color(quint);
+      color: color(primaryText);
+      border: 1px solid;
+      border-radius: 15px;
+      padding: 1rem;
+      margin: 8px;
+      overflow: auto;
+
+      // scrollbar-width: thin;
+    }
+
+    // .invisible-scrollbar::-webkit-scrollbar {
+    //   display: none;
+    // }
+    /* Hide the default scrollbar */
+    .invisible-scrollbar::-webkit-scrollbar {
+      width: 5px;
+      height: 10px;
+    }
+
+    /* Optional: Show a thin scrollbar track */
+    .invisible-scrollbar::-webkit-scrollbar-track {
+      background: transparent;
+    }
+
+    /* Define scrollbar thumb style */
+    .invisible-scrollbar::-webkit-scrollbar-thumb {
+      background: rgba(0, 0, 0, 0.2); /* Adjust to your preference */
+      border-radius: 100px;
+      transition: background 0.3s; /* Add transition for smooth hover effect */
+    }
+
+    /* Define hover effect for scrollbar thumb */
+    .invisible-scrollbar::-webkit-scrollbar-thumb:hover {
+      background: rgba(0, 0, 0, 0.5); /* Adjust to your preference */
+    }
+  }
+
+  .lightbox {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    @include flexCenter;
+    z-index: 10;
+
+    &-content {
+      width: 60svw;
+      @include flexCenter($fd: column);
+
+      .recipe-title {
+        text-align: center;
+        font-size: 1.5rem;
+      }
+
+      .recipe-container {
+        background-color: color(backgroundColor);
+        // width: 80svw;
+        // max-width: 450px;
+        min-width: 55svw;
+      }
+
+      .recipe-details {
+        // width: 65svw;
+        // max-width: 440px;
+        min-width: 55svw;
+      }
+      .panel {
+        // width: 60svw;W
+        max-width: 420px;
+      }
+    }
+  }
+}
