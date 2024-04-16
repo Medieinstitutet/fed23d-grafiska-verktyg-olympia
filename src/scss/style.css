@@ -13,7 +13,7 @@ html {
 }
 html button,
 html input {
-  font-family: "Playfair Display", serif;
+  font-family: 'Playfair Display', serif;
 }
 html body {
   display: flex;
@@ -23,7 +23,7 @@ html body {
   gap: 0;
   background-color: #f0e8d3;
   color: #3b1e04;
-  font-family: "Playfair Display", serif;
+  font-family: 'Playfair Display', serif;
 }
 
 #root {
@@ -427,7 +427,7 @@ header .header-container .header-image-container .header-image {
   outline: none;
   background-color: #e7d5ae;
   color: #3b1e04;
-  font-family: "Playfair Display", serif;
+  font-family: 'Playfair Display', serif;
   border: 1px solid #854811;
 }
 .subscription-panel input:focus {
@@ -774,4 +774,4 @@ footer .social-media {
 }
 .cookie-button.decline:hover {
   background-color: #3b1e04;
-}/*# sourceMappingURL=style.css.map */
+} /*# sourceMappingURL=style.css.map */

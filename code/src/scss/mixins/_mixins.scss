@@ -24,3 +24,9 @@
     grid-row-gap: $rowGap;
   }
 }
+
+@mixin inputAppearance($value) {
+  -webkit-appearance: $value;
+  -moz-appearance: $value;
+  appearance: $value;
+}
