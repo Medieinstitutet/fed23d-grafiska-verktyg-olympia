@@ -6,7 +6,7 @@ import { aboutParagraphs } from '../../../data/Texts';
 const About = () => {
   return (
     <section className="about" id="about">
-      <Heading title="About" />
+      <Heading title="About" about={true} />
       <div className="description">
         {aboutParagraphs.map(paragraph => {
           return <Paragraph key={uuidv4()} text={paragraph} />;
