@@ -6,7 +6,7 @@ import Context from './context/Context';
 import About from './components/main/about/About';
 import FAQ from './components/main/faq/FAQ';
 import Divider from './components/shared/Divider';
-// import Cookiebar from './components/cookiebar/Cookiebar';
+import Cookiebar from './components/cookiebar/Cookiebar';
 /* import Lightbox from './components/shared/Lightbox'; */
 
 function App() {
@@ -14,7 +14,7 @@ function App() {
 
   if (!context) return;
 
-  // const { isCookiebarOpen } = context;
+  const { isCookiebarOpen } = context;
 
   return (
     <>
@@ -26,7 +26,7 @@ function App() {
         <About />
       </main>
       <Footer />
-      {/* {isCookiebarOpen && <Cookiebar />}
+      {isCookiebarOpen && <Cookiebar />}
       {/*   <Lightbox /> will depend on modalState! */}
     </>
   );
