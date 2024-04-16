@@ -7,7 +7,7 @@ const Header = () => {
   return (
     <header>
         <div>            
-            <LogoComponent />
+          <LogoComponent />
         </div>
         <div className="header-container">
           <Divider />
