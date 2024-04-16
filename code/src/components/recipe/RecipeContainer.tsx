@@ -30,12 +30,16 @@ const RecipeContainer = ({ recipe: initialRecipe }: Props) => {
         <button className="recipe-image" onClick={toggleModal}>
           <img src={recipe.image.src} alt={recipe.image.alt} width={recipe.image.width} height={recipe.image.height} />
           <div className="overlay">
-            <div className="recipe-title">{recipe.title}</div>
+            <div className="recipe-title">
+              <h3>{recipe.title}</h3>
+            </div>
           </div>
         </button>
       ) : (
         <>
-          <div className="recipe-title">{recipe.title}</div>
+          <div className="recipe-title">
+            <h3>{recipe.title}</h3>
+          </div>
           <div className="recipe-image">
             <img
               src={recipe.image.src}
@@ -54,7 +58,9 @@ const RecipeContainer = ({ recipe: initialRecipe }: Props) => {
 
       <Lightbox isOpen={showModal} onClose={toggleModal}>
         <div className="recipe-container">
-          <div className="recipe-title">{recipe.title}</div>
+          <div className="recipe-title">
+            <h3>{recipe.title}</h3>
+          </div>
           <RecipeCounter onServingsChange={handleServingsChange} />
           <div className="recipe-details">
             <Panel height="45%" recipe={recipe} showIngredients />
