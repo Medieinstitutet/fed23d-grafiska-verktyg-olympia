@@ -26,6 +26,9 @@ footer {
   .address,
   .social-media {
     height: 100%;
+    @include response(md) {
+      width: 190px;
+    }
   }
 
   .address {
@@ -33,5 +36,8 @@ footer {
   }
   .social-media {
     @include flexCenter($gap: 4px);
+    @include response(md) {
+      justify-content: flex-end;
+    }
   }
 }

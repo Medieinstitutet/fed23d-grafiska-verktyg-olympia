@@ -39,6 +39,20 @@
   }
 }
 
+.about-heading {
+  background-color: color(background-color);
+  text-align: center;
+  margin: auto;
+  @include response(md) {
+    background-color: color(quint);
+    border-radius: 15px;
+    padding: 10px 16px;
+  }
+  @include response(lg) {
+    background-color: color(background-color);
+  }
+}
+
 .lightbox {
   width: 100vw;
   min-height: 100vh;
