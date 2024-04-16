@@ -1,5 +1,5 @@
 footer {
-  @include flexCenter($ai: center, $fd: column, $gap: 12px);
+  @include flexCenter($ai: center, $jc: space-between, $gap: 12px);
   height: 140px;
 
   width: 100%;
@@ -10,11 +10,6 @@ footer {
   margin-left: auto;
   margin-right: auto;
   background-color: color(quint);
-
-  .footer-mobile {
-    width: 100%;
-    @include flexCenter($ai: center, $jc: space-between, $fd: row);
-  }
 
   @include response(md) {
     height: 120px;
@@ -38,12 +33,5 @@ footer {
   }
   .social-media {
     @include flexCenter($gap: 4px);
-  }
-  .footer-right,
-  .footer-left {
-    @include flexCenter($ai: center, $fd: column, $jc: space-between);
-  }
-  .footer-left {
-    @include flexCenter($ai: center, $fd: column, $jc: space-between);
   }
 }
