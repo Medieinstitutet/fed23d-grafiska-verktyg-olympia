@@ -112,30 +112,23 @@
       // scrollbar-width: thin;
     }
 
-    // .invisible-scrollbar::-webkit-scrollbar {
-    //   display: none;
-    // }
-    /* Hide the default scrollbar */
     .invisible-scrollbar::-webkit-scrollbar {
       width: 5px;
       height: 10px;
     }
 
-    /* Optional: Show a thin scrollbar track */
     .invisible-scrollbar::-webkit-scrollbar-track {
       background: transparent;
     }
 
-    /* Define scrollbar thumb style */
     .invisible-scrollbar::-webkit-scrollbar-thumb {
-      background: rgba(0, 0, 0, 0.2); /* Adjust to your preference */
+      background: rgba(0, 0, 0, 0.2);
       border-radius: 100px;
-      transition: background 0.3s; /* Add transition for smooth hover effect */
+      transition: background 0.3s;
     }
 
-    /* Define hover effect for scrollbar thumb */
     .invisible-scrollbar::-webkit-scrollbar-thumb:hover {
-      background: rgba(0, 0, 0, 0.5); /* Adjust to your preference */
+      background: rgba(0, 0, 0, 0.5);
     }
   }
 
@@ -151,27 +144,30 @@
 
     &-content {
       width: 60svw;
+      height: 95svh;
       @include flexCenter($fd: column);
-
-      .recipe-title {
-        text-align: center;
-        font-size: 1.5rem;
-      }
 
       .recipe-container {
         background-color: color(backgroundColor);
-        // width: 80svw;
-        // max-width: 450px;
+        height: 100%;
         min-width: 55svw;
       }
 
+      .recipe-title {
+        text-align: center;
+        height: 15%;
+        @include flexCenter;
+        h3 {
+          font-size: 1.2rem;
+        }
+      }
+
       .recipe-details {
-        // width: 65svw;
-        // max-width: 440px;
+        height: 75%;
         min-width: 55svw;
       }
+
       .panel {
-        // width: 60svw;W
         max-width: 420px;
       }
     }
