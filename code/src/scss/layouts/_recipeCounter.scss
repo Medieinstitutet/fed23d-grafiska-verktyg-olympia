@@ -1,27 +1,28 @@
 .counter {
-  height: 52px;
-  margin: 10px 0;
-  // background-color: pink;
+  height: 3.25rem;
+  margin: 1rem 0;
   @include flexCenter;
+  width: 12.5rem;
 
   input {
-    margin: 0 30px;
+    margin: 0 2rem;
     background-color: transparent;
     border: none;
     font-size: 2rem;
     text-align: center;
+    @include inputAppearance(textfield);
   }
 
   input,
   button {
-    height: 50px;
-    width: 80px;
+    height: 3.125rem;
+    width: 3rem;
   }
 
   button {
-    width: 50px;
+    width: 3.125rem;
     background-color: color(quint);
     border: none;
-    font-size: 2rem;
+    font-size: 1.75rem;
   }
 }
