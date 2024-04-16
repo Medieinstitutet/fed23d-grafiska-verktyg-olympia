@@ -1,6 +1,7 @@
 header {
   @include flexCenter($jc: center, $fd: column, $gap: 5px);
   padding-top: 10px;
+  width: 100%;
 
   .logo {
     width: 333px;
@@ -9,7 +10,7 @@ header {
 
   .header-container {
     @include flexCenter($jc: center, $fd: column, $gap: 10px);
-    width: 100svw;
+    width: 100%;
     height: auto;
 
     .divider {
@@ -43,7 +44,7 @@ header {
 
     .header-image-container {
       @include flexCenter($jc: center, $fd: row, $gap: 10px);
-      width: 100svw;
+      width: 100%;
       height: auto;
 
       .header-image {
@@ -57,6 +58,7 @@ header {
   @include response(md) {
     .header-container {
       .divider {
+        min-width: 595px;
         max-width: 675px;
       }
 
@@ -77,7 +79,7 @@ header {
         .header-image {
           min-height: inherit;
           max-height: 305px;
-          min-width: 610px;
+          min-width: 595px;
           max-width: 675px;
         }
       }
