@@ -1,75 +1,73 @@
-import { useContext, useState } from 'react';
-import Panel from './Panel';
-import { Recipe, adjustIngredientAmounts } from '../../data/Recipes';
-import RecipeCounter from './RecipeCounter.tsx';
-import Context from '../../context/Context.tsx';
-import Lightbox from '../shared/Lightbox.tsx';
+import React from 'react';
+import { Recipe } from '../../data/Recipes';
 
-interface Props {
+interface PanelProps {
+  height: string;
   recipe: Recipe;
+  showIngredients?: boolean;
+  showInstructions?: boolean;
 }
 
-const RecipeContainer = ({ recipe: initialRecipe }: Props) => {
-  const [recipe, setRecipe] = useState(initialRecipe);
-  const [showModal, setShowModal] = useState(false);
-  const context = useContext(Context);
-  if (!context) return;
+function decimalToFraction(decimal: number) {
+  const tolerance = 1.0e-6;
+  let numerator = 1;
+  let denominator = 1;
+  let error = decimal - numerator / denominator;
+  while (Math.abs(error) > tolerance) {
+    if (error > 0) {
+      numerator++;
+    } else {
+      denominator++;
+    }
+    error = decimal - numerator / denominator;
+  }
+  if (numerator === denominator) {
+    return String(numerator);
+  } else if (numerator > denominator) {
+    const wholeNumber = Math.floor(numerator / denominator);
+    numerator %= denominator;
+    return `${wholeNumber} ${numerator}/${denominator}`;
+  } else {
+    return `${numerator}/${denominator}`;
+  }
+}
 
-  const { isMobile } = context;
-
-  const handleServingsChange = (servings: number) => {
-    const adjustedRecipe = adjustIngredientAmounts(recipe, servings);
-    setRecipe(adjustedRecipe);
-  };
-
-  const toggleModal = () => setShowModal(!showModal);
-
+const Panel = ({ height, recipe, showIngredients, showInstructions }: PanelProps) => {
   return (
-    <div className="recipe-wrapper">
-      {isMobile ? (
-        <button className="recipe-image" onClick={toggleModal}>
-          <img src={recipe.image.src} alt={recipe.image.alt} width={recipe.image.width} height={recipe.image.height} />
-          <div className="overlay">
-            <div className="recipe-title">
-              <h3>{recipe.title}</h3>
-            </div>
-          </div>
-        </button>
-      ) : (
+    <div className="panel invisible-scrollbar" style={{ height }}>
+      {showIngredients && (
         <>
-          <div className="recipe-title">
-            <h3>{recipe.title}</h3>
-          </div>
-          <div className="recipe-image">
-            <img
-              src={recipe.image.src}
-              alt={recipe.image.alt}
-              width={recipe.image.width}
-              height={recipe.image.height}
-            />
-          </div>
-          <RecipeCounter onServingsChange={handleServingsChange} />
-          <div className="recipe-details">
-            <Panel height="45%" recipe={recipe} showIngredients />
-            <Panel height="55%" recipe={recipe} showInstructions />
-          </div>
+          <h3>Ingredients</h3>
+          <ul>
+            {recipe.ingredients.map((ingredient, index) => (
+              <li key={index}>
+                {ingredient.amount && !Number.isInteger(ingredient.amount)
+                  ? decimalToFraction(ingredient.amount)
+                  : ingredient.amount}{' '}
+                &nbsp;
+                {ingredient.unit && (
+                  <span>
+                    {ingredient.unit}
+                    {ingredient.amount && ingredient.amount > 1 && 's'}
+                    &nbsp;
+                  </span>
+                )}
+                {ingredient.description}
+                <br />
+                {ingredient.extras && <span> ({ingredient.extras})</span>}
+              </li>
+            ))}
+          </ul>
         </>
       )}
-
-      <Lightbox isOpen={showModal} onClose={toggleModal}>
-        <div className="recipe-container">
-          <div className="recipe-title">
-            <h3>{recipe.title}</h3>
-          </div>
-          <RecipeCounter onServingsChange={handleServingsChange} />
-          <div className="recipe-details">
-            <Panel height="45%" recipe={recipe} showIngredients />
-            <Panel height="55%" recipe={recipe} showInstructions />
-          </div>
-        </div>
-      </Lightbox>
+      {showInstructions && (
+        <>
+          <h3>Instructions</h3>
+          <p>{recipe.instructions}</p>
+        </>
+      )}
     </div>
   );
 };
 
-export default RecipeContainer;
+export default Panel;
