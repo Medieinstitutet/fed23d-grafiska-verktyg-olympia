@@ -7,7 +7,7 @@
   }
   @include response(lg) {
     gap: 60px;
-    max-width: 990px;
+    max-width: 800px;
   }
   .description {
     @include flexCenter($fd: column, $gap: 16px);
