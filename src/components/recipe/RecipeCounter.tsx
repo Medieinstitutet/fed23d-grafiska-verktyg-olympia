@@ -30,14 +30,7 @@ const RecipeCounter = ({ onServingsChange }: ServingsProps) => {
   return (
     <div className="counter">
       <button onClick={handleDecrement}>-</button>
-      <input
-        className="no-spinner"
-        type="number"
-        name="portions"
-        id="portions"
-        value={servings}
-        onChange={handleInputChange}
-      />
+      <input className="no-spinner" type="number" name="portions" value={servings} onChange={handleInputChange} />
       <button onClick={handleIncrement}>+</button>
     </div>
   );
