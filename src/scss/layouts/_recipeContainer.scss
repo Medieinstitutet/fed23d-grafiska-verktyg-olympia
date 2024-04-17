@@ -20,6 +20,7 @@
   .recipe-wrapper {
     @include flexCenter($fd: column);
   }
+
   .recipe-image {
     position: relative;
     width: 10rem;
@@ -68,6 +69,12 @@
     }
   }
 
+  .counter {
+    .no-spinner {
+      padding-bottom: 5px;
+    }
+  }
+
   .recipe-details {
     width: 95%;
     height: 80svh;
@@ -88,6 +95,7 @@
     @include response(md) {
       width: 12.75rem;
     }
+
     @include response(lg) {
       width: 18.75rem;
     }
@@ -113,13 +121,13 @@
     }
 
     .invisible-scrollbar::-webkit-scrollbar-thumb {
-      background: rgba(0, 0, 0, 0.2);
+      background: rgba(0, 0, 0, 0.2); 
       border-radius: 100px;
-      transition: background 0.3s;
+      transition: background 0.3s; 
     }
 
     .invisible-scrollbar::-webkit-scrollbar-thumb:hover {
-      background: rgba(0, 0, 0, 0.5);
+      background: rgba(0, 0, 0, 0.5); 
     }
   }
 
@@ -148,6 +156,7 @@
         text-align: center;
         height: 15%;
         @include flexCenter;
+
         h3 {
           font-size: 1.2rem;
         }

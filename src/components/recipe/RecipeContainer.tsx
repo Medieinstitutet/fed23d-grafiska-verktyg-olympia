@@ -25,7 +25,7 @@ const RecipeContainer = ({ recipe: initialRecipe }: Props) => {
   const toggleModal = () => setShowModal(!showModal);
 
   return (
-    <div className="recipe-wrapper">
+    <div className="recipe-wrapper" id="recipes">
       {isMobile ? (
         <button className="recipe-image" onClick={toggleModal}>
           <img src={recipe.image.src} alt={recipe.image.alt} width={recipe.image.width} height={recipe.image.height} />

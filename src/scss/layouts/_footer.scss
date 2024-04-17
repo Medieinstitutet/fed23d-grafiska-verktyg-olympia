@@ -39,5 +39,12 @@ footer {
     @include response(md) {
       justify-content: flex-end;
     }
+    
+    & img {
+      @include response(lg) {
+
+      cursor: pointer;
+      }
+    }    
   }
 }

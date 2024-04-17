@@ -4,7 +4,7 @@ import sass from 'sass';
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  /*  base: '/fed23d-grafiska-verktyg-olympia/', */
+  base: '/fed23d-grafiska-verktyg-olympia/',
   plugins: [react()],
   css: {
     preprocessorOptions: {
