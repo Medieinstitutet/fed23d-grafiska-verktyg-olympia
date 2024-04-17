@@ -9,7 +9,7 @@ export interface Recipe {
 export const Recipes: Recipe[] = [
   {
     image: {
-      src: '../src/assets/images/sourdough.jpg',
+      src: './src/assets/images/sourdough.jpg',
       alt: 'Sourdough bread cut in two pieces',
       width: 300,
       height: 300,
@@ -33,7 +33,7 @@ export const Recipes: Recipe[] = [
   },
   {
     image: {
-      src: '../src/assets/images/focaccia.jpg',
+      src: './src/assets/images/focaccia.jpg',
       alt: 'three pieces of focaccia with different toppings',
       width: 300,
       height: 300,
@@ -54,7 +54,7 @@ export const Recipes: Recipe[] = [
   },
   {
     image: {
-      src: '../src/assets/images/wholewheat2.jpg',
+      src: './src/assets/images/wholewheat2.jpg',
       alt: 'whole wheat bread laid out on a baking towel',
       width: 300,
       height: 300,
@@ -73,7 +73,7 @@ export const Recipes: Recipe[] = [
       'In the dance of health and flavor, this whole wheat bread is a graceful performer. Whisk together both flours, yeast, and salt in a large bowl. Warm the honey slightly, then stir it into the warm water. Add this sweet elixir to the flour mixture, stirring until a sticky dough forms. Transfer the dough to a floured surface and knead with love for about 10 minutes, until smooth and elastic. Place it in a greased bowl, cover, and let it rise in a warm spot until doubled, about 1 hour. Punch down the risen dough to release any fairy tales it might have dreamed up, then shape it into a loaf. Place it in a greased loaf pan, cover, and let it rise again until it has proudly crowned the rim of the pan, about 30 to 40 minutes. Preheat your oven to 375°F (190°C). Bake the loaf until it sings a golden tune when tapped on the bottom, about 35 minutes. Cool on a wire rack before slicing, revealing a heart of gold.',
   },
   {
-    image: { src: '../src/assets/images/bagels.jpg', alt: 'Bagels in a basket', width: 300, height: 300 },
+    image: { src: './src/assets/images/bagels.jpg', alt: 'Bagels in a basket', width: 300, height: 300 },
     title: 'Sunrise Bagels',
     servings: 1,
     ingredients: [
@@ -94,7 +94,7 @@ export const Recipes: Recipe[] = [
   },
   {
     image: {
-      src: '../src/assets/images/bagette.jpg',
+      src: './src/assets/images/bagette.jpg',
       alt: 'Pieces of baguettes in a paper bag',
       width: 300,
       height: 300,
@@ -113,7 +113,7 @@ export const Recipes: Recipe[] = [
   },
   {
     image: {
-      src: '../src/assets/images/raisinbread.jpg',
+      src: './src/assets/images/raisinbread.jpg',
       alt: 'Sliced Cinnamon Raisin Bread on a cutting board',
       width: 300,
       height: 300,
