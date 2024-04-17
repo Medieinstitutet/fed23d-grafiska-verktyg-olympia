@@ -20,6 +20,7 @@
   .recipe-wrapper {
     @include flexCenter($fd: column);
   }
+
   .recipe-image {
     position: relative;
     width: 10rem;
@@ -155,6 +156,7 @@
         text-align: center;
         height: 15%;
         @include flexCenter;
+
         h3 {
           font-size: 1.2rem;
         }
