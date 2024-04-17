@@ -9,7 +9,7 @@ export interface Recipe {
 export const Recipes: Recipe[] = [
   {
     image: {
-      src: '/fed23d-grafiska-verktyg-olympia/src/assets/images/sourdough.jpg',
+      src: '/fed23d-grafiska-verktyg-olympia/sourdough.jpg',
       alt: 'Sourdough bread cut in two pieces',
       width: 300,
       height: 300,
