@@ -30,7 +30,14 @@ const RecipeCounter = ({ onServingsChange }: ServingsProps) => {
   return (
     <div className="counter">
       <button onClick={handleDecrement}>-</button>
-      <input className="no-spinner" type="number" name="portions" value={servings} onChange={handleInputChange} />
+      <input
+        className="no-spinner"
+        type="number"
+        name="portions"
+        value={servings}
+        onChange={handleInputChange}
+        aria-label="servings amount for ingredients"
+      />
       <button onClick={handleIncrement}>+</button>
     </div>
   );
