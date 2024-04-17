@@ -18,9 +18,9 @@
 
 ## Formatting
 
-This project uses code standards by applying the Eslint and Prettier tools:
+This project uses code standards by applying the ESLint and Prettier tools:
 
-- **Eslint**: identifies bugs and patterns to make the code more consistent.
+- **ESLint**: identifies bugs and patterns to make the code more consistent.
 - **Prettier**: code formatter for making the code more readable and consistent.
 
 ## Status
