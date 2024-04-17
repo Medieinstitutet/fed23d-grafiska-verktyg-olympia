@@ -3,23 +3,29 @@
   height: 50px;
   border-radius: 10px;
   font-size: 2rem;
+  padding-bottom: 5px;  
 
   cursor: pointer;
   @include flexCenter($jc: center, $ai: center);
+
   @include response(md) {
     width: 150px;
     height: 60px;
   }
+
   &.accept {
     background-color: color(tertiary);
     color: color(primaryText);
+
     &:hover {
       background-color: color(quart);
     }
   }
+  
   &.decline {
     background-color: color(secondary);
     color: color(backgroundColor);
+
     &:hover {
       background-color: color(primaryText);
     }
