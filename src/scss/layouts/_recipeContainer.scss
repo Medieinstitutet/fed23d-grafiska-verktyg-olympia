@@ -110,7 +110,6 @@
       overflow: auto;
     }
 
-   
     .invisible-scrollbar::-webkit-scrollbar {
       width: 5px;
       height: 10px;
@@ -143,20 +142,27 @@
 
     &-content {
       width: 60svw;
+      height: 95svh;
       @include flexCenter($fd: column);
-
-      .recipe-title {
-        text-align: center;
-        font-size: 1.5rem;
-      }
 
       .recipe-container {
         background-color: color(backgroundColor);
+        height: 100%;
         min-width: 55svw;
+      }
+
+      .recipe-title {
+        text-align: center;
+        height: 15%;
+        @include flexCenter;
+        h3 {
+          font-size: 1.2rem;
+        }
       }
 
       .recipe-details {
         min-width: 55svw;
+        height: 75%;
       }
       .panel {
         max-width: 420px;
