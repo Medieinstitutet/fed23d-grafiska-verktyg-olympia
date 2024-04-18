@@ -1,0 +1,62 @@
+.divider {
+  width: 91.3%;
+  height: 10px;
+  background-color: color(quint);
+  min-width: 350px;
+  
+  @include response(md) {
+    height: 20px;
+    max-width: 675px;
+  }
+
+  @include response(lg) {
+    height: 35px;
+  }
+}
+
+.paragraph {
+  line-height: 1rem;
+  font-size: 0.75rem;
+  font-weight: 900;
+
+  @include response(md) {
+    line-height: 1.5rem;
+    font-size: 1.125rem;
+  }
+
+  @include response(lg) {
+    font-size: 1.5rem;
+    line-height: 1.75rem;
+  }
+}
+
+.large-heading {
+  font-size: 1.5rem;
+  text-align: center;
+
+  @include response(md) {
+    font-size: 2rem;
+    font-weight: 700;
+  }
+
+  @include response(lg) {
+    font-size: 3rem;
+    font-weight: 800;
+  }
+}
+
+.about-heading {
+  background-color: color(backgroundColor);
+  text-align: center;
+  margin: auto;
+
+  @include response(md) {
+    background-color: color(quint);
+    border-radius: 15px;
+    padding: 10px 16px;
+  }
+
+  @include response(lg) {
+    background-color: color(backgroundColor);
+  }
+}

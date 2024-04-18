@@ -1,0 +1,32 @@
+@mixin flexCenter($ai: center, $jc: center, $fd: row, $gap: 0) {
+  display: flex;
+  align-items: $ai;
+  justify-content: $jc;
+  flex-direction: $fd;
+  gap: $gap;
+}
+
+@mixin grid-template($config) {
+  $columns: map-get($config, columns);
+  $rows: map-get($config, rows);
+  $columnGap: map-get($config, column-gap);
+  $rowGap: map-get($config, row-gap);
+
+  display: grid;
+  grid-template-columns: $columns;
+  grid-template-rows: $rows;
+
+  @if $columnGap {
+    grid-column-gap: $columnGap;
+  }
+
+  @if $rowGap {
+    grid-row-gap: $rowGap;
+  }
+}
+
+@mixin inputAppearance($value) {
+  -webkit-appearance: $value;
+  -moz-appearance: $value;
+  appearance: $value;
+}
