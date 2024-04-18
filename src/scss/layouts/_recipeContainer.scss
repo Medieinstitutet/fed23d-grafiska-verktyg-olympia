@@ -141,11 +141,13 @@
     background-color: rgba(0, 0, 0, 0.8);
     @include flexCenter;
     z-index: 10;
+    animation: fadeInOut 0.5s ease;
 
     &-content {
       width: 60svw;
       height: 95svh;
       @include flexCenter($fd: column);
+      animation: fadeInContent 0.5s ease;
 
       .recipe-container {
         background-color: color(backgroundColor);
@@ -169,6 +171,26 @@
       }
       .panel {
         max-width: 420px;
+      }
+    }
+
+    @keyframes fadeInOut {
+      0% {
+        opacity: 0;
+      }
+      100% {
+        opacity: 1;
+      }
+    }
+
+    @keyframes fadeInContent {
+      0% {
+        opacity: 0;
+        transform: translateY(-20px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0);
       }
     }
   }
