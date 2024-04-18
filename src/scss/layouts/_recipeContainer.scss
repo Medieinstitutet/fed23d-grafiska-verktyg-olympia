@@ -27,7 +27,7 @@
     height: 10rem;
     overflow: hidden;
     margin-bottom: 1rem;
-    border-radius: 0;
+    -webkit-appearance: none;
 
     @include response(md) {
       width: 12.5rem;

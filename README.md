@@ -1,9 +1,34 @@
 # Graphic-Tools Assignment (Olympia/Amorella)
 
 ## Screenshots
+### Mobile 
+![full page mobile mode](src/assets/screenshots/mobile.png)
+<br>**Cookie bar:**
+![cookie bar mobile mode](src/assets/screenshots/cookiebar-mobile.png)
+<br>**Pop-up when pressing a recipe image:** 
+![pop-up when pressing a recipe image in mobile](src/assets/screenshots/popup-mobile.png)
+
+### Tablet 
+![full page tablet mode](src/assets/screenshots/tablet.png)
+<br>**Cookie bar:** 
+![cookie bar tablet mode](src/assets/screenshots/cookiebar-tablet.png)
+
+### Desktop 
+![full page desktop](src/assets/screenshots/desktop.png)
+<br>**Cookie bar:** 
+![cookie bar desktop mode](src/assets/screenshots/cookiebar-desktop.png)
+
+## Validation 
+### Lighthouse
+![lighthouse validation, all green](src/assets/validation/lighthouse-desktop-100.png)
+
+### CSS
+![css validation, no errors](src/assets/validation/css-validation.png)
+
+### HTML
+![html validation, no errors](src/assets/validation/html-validation.png)
 
 ## Tech Stack
-
 ### Frontend
 
 - HTML5
