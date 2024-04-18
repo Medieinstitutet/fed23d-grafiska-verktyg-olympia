@@ -32,5 +32,9 @@
     border: none;
     font-size: 1.75rem;
     cursor: pointer;
+
+    &:hover {
+      background-color: color(tertiary);
+    }
   }
 }
