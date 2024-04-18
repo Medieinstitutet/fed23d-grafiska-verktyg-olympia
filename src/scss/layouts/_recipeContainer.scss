@@ -27,6 +27,7 @@
     height: 10rem;
     overflow: hidden;
     margin-bottom: 1rem;
+    border-radius: 0;
 
     @include response(md) {
       width: 12.5rem;
@@ -121,13 +122,13 @@
     }
 
     .invisible-scrollbar::-webkit-scrollbar-thumb {
-      background: rgba(0, 0, 0, 0.2); 
+      background: rgba(0, 0, 0, 0.2);
       border-radius: 100px;
-      transition: background 0.3s; 
+      transition: background 0.3s;
     }
 
     .invisible-scrollbar::-webkit-scrollbar-thumb:hover {
-      background: rgba(0, 0, 0, 0.5); 
+      background: rgba(0, 0, 0, 0.5);
     }
   }
 
@@ -140,11 +141,13 @@
     background-color: rgba(0, 0, 0, 0.8);
     @include flexCenter;
     z-index: 10;
+    animation: fadeInOut 0.5s ease;
 
     &-content {
       width: 60svw;
       height: 95svh;
       @include flexCenter($fd: column);
+      animation: fadeInContent 0.5s ease;
 
       .recipe-container {
         background-color: color(backgroundColor);
@@ -168,6 +171,37 @@
       }
       .panel {
         max-width: 420px;
+      }
+    }
+
+    @keyframes fadeInOut {
+      0% {
+        opacity: 0;
+      }
+      100% {
+        opacity: 1;
+      }
+    }
+
+    @keyframes fadeInContent {
+      0% {
+        opacity: 0;
+        transform: translateY(-20px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes fadeOutContent {
+      0% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+      100% {
+        opacity: 0;
+        transform: translateY(-20px);
       }
     }
   }
